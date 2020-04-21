@@ -13,7 +13,7 @@ class Pengumuman extends CI_Model
     }
     public function addPengumuman()
     {
-        $data  = [
+        $data  = [ 
             'title' => $this->input->post('title', true),
             'description' => $this->input->post('description', true),
             'id_admin' => $this->session->userdata('id_admin'),
