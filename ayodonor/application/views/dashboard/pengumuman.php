@@ -103,7 +103,7 @@
             color: black !important;
         }
 
-        .bukalapak {
+/*        .bukalapak {
             color: black !important;
             padding-left: 0.5rem !important;
             display: inline-block !important;
@@ -112,7 +112,7 @@
         .bukalapak img {
             height: 3rem;
             margin-left: 6px;
-        }
+        }*/
 
         .npclogo {
             display: inline-block;
@@ -121,6 +121,8 @@
         .center {
             text-align: center;
         }
+
+
     </style>
 </head>
 
