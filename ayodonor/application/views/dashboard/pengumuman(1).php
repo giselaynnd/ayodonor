@@ -121,7 +121,7 @@
         .center {
             text-align: center;
         }
-    </style>
+    </style> 
 </head>
 
 <body id="dashboard">
