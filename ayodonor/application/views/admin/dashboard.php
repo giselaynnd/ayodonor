@@ -51,7 +51,7 @@
         }
 
         .dashboard-container {
-            min-height: 100%;
+            min-height: 20%;
             position: relative;
             padding-bottom: 0 !important;
         }
