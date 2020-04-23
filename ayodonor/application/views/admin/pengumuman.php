@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard - OUTERFEST(an Interfest 2.0)</title>
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="../../../assets/css/main.css" />
-    <link rel="stylesheet" href="../../../assets/css/animations.css">
+    <title>Dashboard - AYODONOR</title>
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/main.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/animations.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
     <style>
@@ -142,22 +142,18 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
         <!-- <a class="navbar-brand" href="#">
-            <img src="../../../assets/img/outerfest_logo_sml.png" alt="logo">
+            <img src="<?= base_url() ?>assets/img/outerfest_logo_sml.png" alt="logo">
         </a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto">
-                
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin') ?>">DASHBOARD</a>
                 </li>
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/peserta') ?>">PESERTA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url('admin/transaksi') ?>">TRANSAKSI</a>
                 </li>
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/pengumuman') ?>">PENGUMUMAN</a>
@@ -179,7 +175,7 @@
     <!-- end head -->
     <!-- start body -->
 
-    <div class="dashboard-container">
+     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
                 Selamat datang, <b><?= $this->session->userdata('namaAdmin')?></b> !
@@ -222,7 +218,7 @@
                                 <td><?= $this->Admins->getAdminById($d['id_admin'])['nama'] ?></td>
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPengumuman" data-title="<?= $d['title'] ?>" data-id="<?= $d['id_pengumuman'] ?>" data-desc="<?= $d['description'] ?>">Edit</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPengumuman<?= $d['id_pengumuman']?>">Edit</button>
                                         <a href="<?= base_url('admin/hapusPengumuman') ?>/<?= $d['id_pengumuman'] ?>" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
@@ -233,10 +229,9 @@
             </div>
         </div>
     </div>
-
-
     <!-- Modal -->
-    <div class="modal fade" id="tambahPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+   <div class="modal fade" id="tambahPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -253,7 +248,7 @@
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
-                            <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" placeholder="Deskripsi pengumuman"></textarea>
+                            <textarea class="form-control" name="description" id="deskripsi" rows="3" placeholder="Deskripsi pengumuman"></textarea>
                         </div>
                     </form>
                 </div>
@@ -265,7 +260,9 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="editPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<?php
+foreach ($pengumuman as $d) { ?>
+    <div class="modal fade" id="editPengumuman<?= $d['id_pengumuman']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -277,13 +274,16 @@
                 <div class="modal-body">
                     <form id="pengumumanEdit" action="editPengumuman" method="POST">
                         <div class="form-group">
-                            <label for="judul">Judul</label>
-                            <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman" value="">
+                            <label for="judul">ID_pengumuman</label>
+                            <input type="text" name="id_pengumuman" class="form-control" id="judul" placeholder="ID" value="<?= $d['id_pengumuman']?>">
                         </div>
-                        <input type="hidden" id="id_pengumuman" name="id_pengumuman">
+                        <div class="form-group">
+                            <label for="judul">Judul</label>
+                            <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman" value="<?= $d['title']?>">
+                        </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>
-                            <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" placeholder="Deskripsi pengumuman" value=""></textarea>
+                            <textarea class="form-control" name="description" id="deskripsi" rows="3" placeholder="Deskripsi pengumuman" ><?= $d['description']?></textarea>
                         </div>
                     </form>
                 </div>
@@ -294,6 +294,7 @@
             </div>
         </div>
     </div>
+<?php } ?>
     <!-- end main -->
     <!-- start footer -->
 
@@ -303,30 +304,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../../../assets/js/main.js"></script>
+    <script src="<?= base_url() ?>assets/js/main.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery.zoom.js"></script>
+    <script type="text/javascript" src="<?= base_url() ?>assets/js/css3-animate-it.js"></script>
+
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../../../assets/js/jquery.zoom.js"></script>
-    <script type="text/javascript" src="../../../assets/js/css3-animate-it.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#table').DataTable();
-        });
-        $('#editPengumuman').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var title = button.data('title') // Extract info from data-* attributes
-            var id = button.data('id')
-            var desc = button.data('desc') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            // console.log(id)
-            modal.find('.modal-body #id_pengumuman').attr('value', id)
-            modal.find('.modal-body #judul').val(title)
-            modal.find('.modal-body #deskripsi').val(desc)
-        })
-    </script>
-
+   
 </body>
 
 </html>

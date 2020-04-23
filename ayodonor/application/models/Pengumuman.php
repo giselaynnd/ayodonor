@@ -28,7 +28,9 @@ class Pengumuman extends CI_Model
             'title' => $this->input->post('title', true),
             'description' => $this->input->post('description', true),
         ];
-        $this->db->where('id_pengumuman', $id)->update('pengumuman', $data);
+        $this->db->set($data);
+        $this->db->where('id_pengumuman', $id);
+        $this->db->update('pengumuman');   
     }
     public function delete($id)
     {

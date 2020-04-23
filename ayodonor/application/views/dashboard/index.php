@@ -163,7 +163,7 @@
                     <a class="scroll nav-link" href="<?= base_url('user'); ?>/pengumuman">PENGUMUMAN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/timeline">TIMELINE</a>
+                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/daftarDonor">DAFTAR DONOR</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -145,7 +145,7 @@
                     <a class="scroll nav-link" href="<?= base_url('user'); ?>/pengumuman">PENGUMUMAN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/timeline">TIMELINE</a>
+                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/daftarDonor">DAFTAR DONOR</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -161,27 +161,27 @@
                 </li>
             </ul>
         </div>
-        <div class="footer">&copy; Schematics 2018</div>
     </nav>
     <!-- end head -->
     <!-- start body -->
 
     <div class="dashboard-container">
-        <div style="min-height: 100%;padding-bottom: 5rem;">
-            <div class="alert alert-secondary">
-                Selamat datang, <b><?= $loggedin['nama'] ?></b> !
-            </div>
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="title">Timeline</h3>
-                        <hr>
-                    </div>
+        <h1>Register</h1>
+            <form class="form" action="<?= base_url('user');?>/registDonor/<?=$id_tempat.'/'.$loggedin['id_peserta']; ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+                <div class="material-form npc">
+                    <label class="material-label">Golongan Darah</label>
+                    <input type="text" class="material-input" name="golonganDarah" value="<?= set_value('golDarah'); ?>" required>
                 </div>
-                <div class="row">
+                <div class="material-form npc">
+                    <label class="material-label">Rhesus</label>
+                    <input type="text" class="material-input" name="rhesus" value="<?= set_value('rhesus'); ?>" required>
                 </div>
-            </div>
-        </div>
+                <div class="material-form npc">
+                    <label class="material-label">Riwayat Penyakit yang diderita</label>
+                    <input type="text" class="material-input" name="penyakit" value="<?= set_value('penyakit'); ?>" required>
+                </div> 
+                <button type="submit" class="btn event btn-succsess">Register</button>
+            </form>
     </div>
     <!-- end main -->
     <!-- start footer -->

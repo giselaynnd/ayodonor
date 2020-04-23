@@ -68,17 +68,45 @@ class Peserta extends CI_Model
             'total' => $this->db->count_all_results('peserta'),
             'terdaftar' => $this->db->where('status', '1')->count_all_results('peserta'),
             'approve' => $this->db->where('status', '2')->count_all_results('peserta'),
-            'closed' => $this->db->where('status', '3')->count_all_results('peserta')
+            'closed' => $this->db->where('status', '3')->count_all_results('peserta'),
         ];
         return $data;
+    }
+    public function approve($id)
+    {
+        $data = array(
+            'status' => 1
+        );
+        $where = array('id_peserta' => $id);
+        $this->db->where($where)->update('peserta', $data);
+        $data = array(
+            'status' => 1
+        );
+        $this->db->where($where)->update('data_donor', $data);
+    }
+    public function nonapprove($id)
+    {
+        $data = array(
+            'status' => 3
+        );
+        $where = array('id_peserta' => $id);
+        $this->db->where($where)->update('peserta', $data);
+        $data = array(
+            'status' => 1
+        );
+        $this->db->where($where)->update('data_donor', $data);
     }
     public function fetch()
     {
         return $this->db->get('peserta')->result_array();
     }
+    public function getPesertabyId($id)
+    {
+        return $this->db->where('id_peserta', $id)->get('peserta')->row_array();
+    }
     public function fetch_approval()
     {
-        return $this->db->where('status', '2')->get('peserta')->result_array();
+        return $this->db->where('status', '0')->get('data_donor')->result_array();
     }
     public function getPesertaByEmail($email)
     {

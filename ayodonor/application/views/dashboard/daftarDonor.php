@@ -145,7 +145,7 @@
                     <a class="scroll nav-link" href="<?= base_url('user'); ?>/pengumuman">PENGUMUMAN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/timeline">TIMELINE</a>
+                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/daftarDonor">DAFTAR DONOR</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -174,12 +174,24 @@
             <div class="container mt-4">
                 <div class="row">
                     <div class="col">
-                        <h3 class="title">Timeline</h3>
+                        <h3 class="title">Tempat Donor</h3>
                         <hr>
                     </div>
                 </div>
-                <div class="row">
-                </div>
+                <?php
+                foreach ($tempat_donor as $data) {
+                    ?>
+                    <div class="card alert-secondary mb-3">
+                        <div class="card-body">
+                            <p class="card-title"><b><?= $data['nama_tempat'] ?></b>
+                                <span style="float: right;"><?= $data['status'] ?></span></p>
+                            <p class="card-text"><?= $data['alamat_tempat'] ?></p>
+                            <p>
+                                <a class="btn btn-success" href="<?= base_url('user'); ?>/form_donor/<?=$data['id_tempat']; ?>">Daftar</a>
+                            </p>
+                        </div>
+                    </div>
+                <?php }; ?>
             </div>
         </div>
     </div>

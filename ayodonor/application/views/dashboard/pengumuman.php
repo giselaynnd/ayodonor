@@ -103,7 +103,7 @@
             color: black !important;
         }
 
-/*        .bukalapak {
+        .bukalapak {
             color: black !important;
             padding-left: 0.5rem !important;
             display: inline-block !important;
@@ -112,7 +112,7 @@
         .bukalapak img {
             height: 3rem;
             margin-left: 6px;
-        }*/
+        }
 
         .npclogo {
             display: inline-block;
@@ -121,8 +121,6 @@
         .center {
             text-align: center;
         }
-
-
     </style>
 </head>
 
@@ -147,7 +145,7 @@
                     <a class="scroll nav-link" href="<?= base_url('user'); ?>/pengumuman">PENGUMUMAN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/timeline">TIMELINE</a>
+                    <a class="scroll nav-link" href="<?= base_url('user'); ?>/daftarDonor">DAFTAR DONOR</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -194,7 +192,24 @@
         </div>
         <div id="sponsor">
             <div class="sponsor1">
-                <img src="<?= base_url(); ?>assets/img/logo1.png" class="sponsor1child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
+            </div>
+            <div class="sponsor2">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
+            </div>
+            <div class="sponsor3">
+                <a href="https://idcloudhost.com/" target="_blank">
+                    <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
+                </a>
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
+                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
             </div>
         </div>
     </div>

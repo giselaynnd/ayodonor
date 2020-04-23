@@ -12,14 +12,44 @@ class User extends CI_Controller
             $this->load->view('dashboard/index', $data);
         }
     }
-    public function timeline()
+    public function daftarDonor()
     {
         if (!$this->session->userdata('email')) {
             redirect(base_url('Home/login'));
         } else {
             $data['loggedin'] = $this->Peserta->getPesertaByEmail($this->session->userdata('email'));
-            $this->load->view('dashboard/timeline', $data);
+            $data['tempat_donor'] = $this->Tempat_donor->fetch();
+            $this->load->view('dashboard/daftarDonor', $data);
         }
+    }
+
+    public function form_Donor($id_tempat)
+    {
+        if (!$this->session->userdata('email')) {
+            redirect(base_url('Home/login'));
+        } else {
+            $data['loggedin'] = $this->Peserta->getPesertaByEmail($this->session->userdata('email'));
+            $data['id_tempat'] = $id_tempat;
+            $this->load->view('dashboard/form_donor',$data);
+        }
+    }
+
+    public function registDonor($id_tempat,$data){
+
+         $this->form_validation->set_rules($this->Donor->rules);
+
+        if ( $this->form_validation->run() == FALSE ) {
+             $this->session->set_flashdata('SuccessReg', 'error');
+            $this->load->view('dashboard/form_donor',$id_tempat,$data);
+            // var_dump($this->Peserta->rules); die;
+        } else {
+            $this->Donor->register($id_tempat,$data);
+            $this->session->set_flashdata('SuccessReg', 'success');
+            redirect('user/daftarDonor');
+            // harusnya redirect ke dashboard
+            // redirect(base_url('/home/login'));
+        }
+
     }
     public function pengumuman()
     {
