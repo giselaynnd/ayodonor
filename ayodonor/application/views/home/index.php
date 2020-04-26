@@ -11,11 +11,7 @@
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
 </head>
 
-<!-- BODY DIMULAI DARI SINI -->
-
 <body>
-
-	<!--START HEAD NAVBAR-->
 
 	<header class="site-header js-site-header">
 		<nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">

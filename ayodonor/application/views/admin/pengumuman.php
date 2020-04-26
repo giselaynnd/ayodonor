@@ -21,8 +21,6 @@
             width: 80%;
         }
 
-
-
         #nav-tab a {
             display: flex;
             height: 50px;
@@ -105,7 +103,7 @@
         p {
             color: black !important;
         }
-
+/*
         .bukalapak {
             color: black !important;
             padding-left: 0.5rem !important;
@@ -115,7 +113,7 @@
         .bukalapak img {
             height: 3rem;
             margin-left: 6px;
-        }
+        }*/
 
         .npclogo {
             display: inline-block;

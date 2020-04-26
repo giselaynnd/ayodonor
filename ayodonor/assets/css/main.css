@@ -218,10 +218,13 @@ body {
 		padding-top: unset;
 	}
 }
+
+/*ada di pengumuman gataua ap*/
 .navbar .nav-item {
 	box-sizing: border-box;
 	transition: 200ms;
 }
+
 .navbar .nav-item .nav-link {
 	color: white;
 	box-sizing: border-box;
@@ -232,6 +235,8 @@ body {
 .navbar .nav-item .nav-link:active {
 	background: rgba(0, 0, 0, 0.3);
 }
+
+/*pengumuman */ 
 @media only screen and (min-width: 992px) {
 	.navbar .nav-item .nav-link:hover,
 	.navbar .nav-item .nav-link:focus,
@@ -240,6 +245,8 @@ body {
 		color: rgba(0, 0, 0, 0.9);
 	}
 }
+
+
 @media only screen and (min-width: 992px) {
 	.navbar .nav-item .nav-link {
 		color: rgba(0, 0, 0, 0.9);
@@ -686,15 +693,6 @@ body {
 #ab {
 	background: var(--bg-primary);
 }
-#ab .logo {
-/*	background-image: linear-gradient(
-		to right,
-		#02bec4 0%,
-		#0284a8 55%,
-		#114375 90%,
-		#253959 100%
-	); */
-
 	background-image: linear-gradient(
 		to right,
 		#dd514a 0%,
@@ -1021,8 +1019,8 @@ section.event p {
 #register .bottom-line {
 	z-index: 1;
 }
+
 #register .mesh {
-	/* background-image: url("../../assets/img/a.png"); */
 	background-size: cover;
 	background-position: 176px -223px;
 	background-repeat: no-repeat;
@@ -1032,6 +1030,7 @@ section.event p {
 	top: 0;
 	right: 0;
 }
+
 @media only screen and (min-width: 992px) {
 	#register .mesh {
 		background-position: 218px -425px;
@@ -1047,10 +1046,13 @@ section.event p {
 		width: 70%;
 	}
 }
+
+/*pengumuman */
 #dashboard {
 	background: white;
 	font: 100% SFProRegular;
 }
+
 #dashboard nav .footer,
 #dashboard nav .mesh {
 	display: none;
@@ -1072,18 +1074,25 @@ section.event p {
 		padding: 48px 0;
 		margin: 0;
 	}
+
+	/*margin dashboard pengumuman */
 	#dashboard nav .navbar-collapse {
 		margin-top: 16px;
 	}
+
+	/*aturan text di dashboard pengumuman */
 	#dashboard nav .navbar-nav {
 		display: block;
 		margin: auto;
 		text-align: left;
 		width: 100%;
 	}
+
 	#dashboard nav .navbar-nav .nav-item {
 		width: 100%;
 	}
+
+	/*dashboard pengumuman */
 	#dashboard nav .navbar-nav .nav-item .nav-link {
 		color: white;
 		padding: 1.5rem;
@@ -1093,9 +1102,13 @@ section.event p {
 	#dashboard nav .navbar-nav .nav-item .nav-link:active {
 		background: #555;
 	}
+
 	#dashboard nav .navbar-nav .nav-item.show {
 		background: #555;
 	}
+
+	/*dropdown menu di dashboard pengumuman */
+
 	#dashboard nav .navbar-nav .dropdown-menu {
 		width: 100%;
 		color: white;
@@ -1105,16 +1118,19 @@ section.event p {
 		padding: 0;
 		top: 100%;
 	}
+
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item {
 		padding: 1.5rem 3rem;
 		line-height: 0;
 		color: white;
 	}
+
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:hover,
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:focus,
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:active {
 		background: #555;
 	}
+
 	#dashboard nav .footer {
 		display: block;
 		color: #999;
@@ -1166,30 +1182,8 @@ section.event p {
 	background: white;
 	padding: 1rem 0rem;
 }
-.sponsor1,
-.sponsor2,
-.sponsor3 {
-	/*margin: 1rem;*/
-}
-.sponsor1child,
-.sponsor2child,
-.sponsor3child {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-}
-.sponsor1child {
-	height: 5rem;
-	margin-top: 0.35rem;
-	margin-bottom: 0.35rem;
-}
-.sponsor2child {
-	height: 3rem;
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
-}
-.sponsor3child {
-	height: 2rem;
-	margin-top: 0.35rem;
-	margin-bottom: 0.35rem;
-}
-/*# sourceMappingURL=main.css.map */
+
+
+
+
+
