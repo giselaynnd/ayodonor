@@ -21,6 +21,12 @@
             width: 80%;
         }
 
+        .alert-secondary{
+            color: white;
+            background-color: #79101a;
+        }
+
+
         #nav-tab a {
             display: flex;
             height: 50px;

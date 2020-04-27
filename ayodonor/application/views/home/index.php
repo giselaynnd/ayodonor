@@ -9,6 +9,16 @@
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
+	<style>
+		.btn-primary {
+			background-color: #565e67;
+			border-color: #79101a;
+		}
+
+		a {
+			color: #79101a;
+		}
+	</style>
 </head>
 
 <body>
@@ -73,7 +83,7 @@
 				Individu dengan golongan darah O memiliki sel darah tanpa antigen, tapi memproduksi antibodi terhadap antigen A dan B. Sehingga, orang dengan golongan darah O-negatif dapat mendonorkan darahnya kepada orang dengan golongan darah ABO apapun dan disebut donor universal. Namun, orang dengan golongan darah O-negatif hanya dapat menerima darah dari sesama O-negatif.
 			</div>
 			<div class="readmore-btn">
-				<a href="https://schematics.its.ac.id/npc" class="btn" style="margin-right: 15px;">SELENGKAPNYA</a>
+				<a href="https://schematics.its.ac.id/a" class="btn" style="margin-right: 15px;">SELENGKAPNYA</a>
 			</div>
 		</div>
 	</section>
@@ -94,7 +104,6 @@
 			</div>
 			<div class="readmore-btn">
 				<a href="https://schematics.its.ac.id/a" class="btn" style="margin-right: 15px;">SELENGKAPNYA</a>
-				<a href="https://schematics.its.ac.id/a/pengumuman" class="btn" style="margin-right: 15px;">PENGUMUMAN</a>
 			</div>
 		</div>
 	</section>
@@ -113,7 +122,7 @@
 			<div class="desc">
 				Individu dengan golongan darah B memiliki antigen B pada permukaan sel darah merahnya dan menghasilkan antibodi terhadap antigen A dalam serum darahnya. Sehingga, orang dengan golongan darah B-negatif hanya dapat menerima darah dari orang dengan dolongan darah B-negatif atau O-negatif</div>
 			<div class="readmore-btn">
-				<a href="https://schematics.its.ac.id/b" class="btn">SELENGKAPNYA</a>
+				<a href="https://schematics.its.ac.id/a" class="btn">SELENGKAPNYA</a>
 			</div>
 		</div>
 	</section>
@@ -133,7 +142,7 @@
 				Individu dengan golongan darah AB memiliki sel darah merah dengan antigen A dan B serta tidak menghasilkan antibodi terhadap antigen A maupun B. Sehingga, orang dengan golongan darah AB-positif dapat menerima darah dari orang dengan golongan darah ABO apapun dan disebut resipien universal. Namun, orang dengan golongan darah AB-positif tidak dapat mendonorkan darah kecuali pada sesama AB-positif.
 			</div>
 			<div class="readmore-btn">
-				<a href="https://schematics.its.ac.id/ab" class="btn">SELENGKAPNYA</a>
+				<a href="https://schematics.its.ac.id/a" class="btn">SELENGKAPNYA</a>
 			</div>
 		</div>
 	</section>

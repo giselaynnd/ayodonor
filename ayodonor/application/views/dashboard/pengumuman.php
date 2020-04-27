@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard </title>
+    <title>Pengumuman</title>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
@@ -46,7 +46,10 @@
         body {
             height: 100%;
         }
-
+        .alert-secondary {
+            background-color: #79101a;
+            color: white;
+        }
         .dashboard-container {
             min-height: 100%;
             position: relative;
@@ -69,6 +72,7 @@
             margin-top: 64px;
             margin-left: -5%;
             width: 100%;
+
         }
 
         .event {
@@ -100,27 +104,9 @@
         }
 
         p {
-            color: black !important;
+            color: white !important;
         }
 
-        .bukalapak {
-            color: black !important;
-            padding-left: 0.5rem !important;
-            display: inline-block !important;
-        }
-
-        .bukalapak img {
-            height: 3rem;
-            margin-left: 6px;
-        }
-
-        .npclogo {
-            display: inline-block;
-        }
-
-        .center {
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -192,25 +178,7 @@
         </div>
         <div id="sponsor">
             <div class="sponsor1">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor1child">
-            </div>
-            <div class="sponsor2">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor2child">
-            </div>
-            <div class="sponsor3">
-                <a href="https://idcloudhost.com/" target="_blank">
-                    <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
-                </a>
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
-                <img src="<?= base_url(); ?>assets/img/sp.png" class="sponsor3child">
-            </div>
+                <img src="<?= base_url(); ?>assets/img/logo1.png" class="sponsor1child">
         </div>
     </div>
     <!-- end main -->

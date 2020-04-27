@@ -77,7 +77,7 @@
         }
 
         .nama {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
         }
 
         ul.info {
@@ -89,19 +89,14 @@
             color: black !important;
         }
 
-        .bukalapak {
-            color: black !important;
-            padding-left: 0.5rem !important;
-            display: inline-block !important;
-        }
-
-        .bukalapak img {
-            height: 3rem;
-            margin-left: 6px;
-        }
 
         .npclogo {
             display: inline-block;
+        }
+
+        .alert-secondary {
+            background-color: #79101a;
+            color: white;
         }
 
         .center {
@@ -111,6 +106,7 @@
         .material-input {
             color: black;
         }
+
 
         .btn.event {
             font: 100% SFProRegular;
@@ -192,7 +188,7 @@
             <section id="header" class="mt-5">
                 <div class="mx-auto mb-4 center">
                     <?php
-                    echo '<div class="title-event npc npclogo">ayodonor</div>';
+                    echo '<div class="title-event npc npclogo">AYODONOR</div>';
                     ?>
                 </div>
             </section>
@@ -211,6 +207,7 @@
                             
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col">
                             <div class="nama"><b><?= ucwords($loggedin['nama']); ?></b></div>

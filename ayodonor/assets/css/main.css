@@ -192,6 +192,8 @@ body {
 		color: black;
 	}
 }
+
+/*navbar login */
 .navbar {
 	background: #79101a;
 	font: 100% SFProRegular;
@@ -278,21 +280,29 @@ body {
 	}
 }
 @media only screen and (min-width: 992px) {
+
+	/*navbar login */
+
 	.navbar {
 		font: 100% SFProBold;
 /*		font-size: 1.2rem;
 		padding: 24px 96px;*/
 	}
 }
+
+/*login button */
+
 .btn.event {
 	font: 100% SFProBold;
 	font-size: 1.5rem;
-	color: white;
+	color: black;
 	padding: 16px 32px;
 	margin-top: 32px;
 	transition: 500ms;
 	border: none;
 }
+
+
 .btn.event:hover,
 .btn.event:focus,
 .btn.event:active {
@@ -405,16 +415,20 @@ body {
 #header .explore-btn .btn:focus {
 	background-position: -791px -31px;
 }
+
+	/* tulisan ayodonor di dashboard */
 #header .title-event {
-	font: 100% SFProBold;
-	font-size: 5rem;
+	font: 100% PlayfairDisplay-Italic-VariableFont_wght;
+	font-style: italic;
+	font-size: 7rem;
 	-webkit-background-clip: text;
-/*	background-clip: text;*/
-	line-height: 0.95;
 }
 @media only screen and (min-width: 992px) {
+
+	/* tulisan ayodonor di dashboard */
+
 	#header .title-event {
-		font-size: 10rem;
+		font-size: 6rem;
 	}
 }
 #header .title-event.a {
@@ -1011,6 +1025,8 @@ section.event p {
 	padding: 88px 10%;
 }
 @media only screen and (min-width: 768px) {
+	/*padding login*/
+
 	#register {
 		padding: 128px 20%;
 	}
@@ -1032,6 +1048,8 @@ section.event p {
 }
 
 @media only screen and (min-width: 992px) {
+
+	/*img di login */
 	#register .mesh {
 		background-position: 218px -425px;
 		width: 900px;
@@ -1161,9 +1179,13 @@ section.event p {
 		padding: 32px;	
 	}
 }
+
+/*tulisan data diri di dashboard*/
+
 #dashboard .dashboard-container .title {
 	font-family: SFProBold;
 	text-align: center;
+	font-size: 2rem;
 }
 
 #dashboard .dashboard-dalam {

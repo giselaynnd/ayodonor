@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard - OUTERFEST(an Interfest 2.0)</title>
+    <title>Dashboard - AYODONOR</title>
     <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
     <link rel="stylesheet" href="../../../assets/css/animations.css">
     <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
