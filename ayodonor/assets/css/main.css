@@ -53,22 +53,7 @@ body {
     display: block;
 }
 
-.footer-section {
-    background: #781616fc;
-    color: #fff;
-}
 
-.footer-section a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-section a:hover {
-    color: #fff;
-}
-
-.footer-section p {
-    color: rgba(255, 255, 255, 0.5);
-}
 @media only screen and (min-width: 992px) {
 	.navbar .navbar-nav > li.dropdown:hover > a,
 	.navbar .navbar-nav > li.dropdown:hover > a:hover,
@@ -192,8 +177,6 @@ body {
 		color: black;
 	}
 }
-
-/*navbar login */
 .navbar {
 	background: #79101a;
 	font: 100% SFProRegular;
@@ -220,13 +203,10 @@ body {
 		padding-top: unset;
 	}
 }
-
-/*ada di pengumuman gataua ap*/
 .navbar .nav-item {
 	box-sizing: border-box;
 	transition: 200ms;
 }
-
 .navbar .nav-item .nav-link {
 	color: white;
 	box-sizing: border-box;
@@ -237,8 +217,6 @@ body {
 .navbar .nav-item .nav-link:active {
 	background: rgba(0, 0, 0, 0.3);
 }
-
-/*pengumuman */ 
 @media only screen and (min-width: 992px) {
 	.navbar .nav-item .nav-link:hover,
 	.navbar .nav-item .nav-link:focus,
@@ -247,8 +225,6 @@ body {
 		color: rgba(0, 0, 0, 0.9);
 	}
 }
-
-
 @media only screen and (min-width: 992px) {
 	.navbar .nav-item .nav-link {
 		color: rgba(0, 0, 0, 0.9);
@@ -280,29 +256,21 @@ body {
 	}
 }
 @media only screen and (min-width: 992px) {
-
-	/*navbar login */
-
 	.navbar {
 		font: 100% SFProBold;
 /*		font-size: 1.2rem;
 		padding: 24px 96px;*/
 	}
 }
-
-/*login button */
-
 .btn.event {
 	font: 100% SFProBold;
 	font-size: 1.5rem;
-	color: black;
+	color: white;
 	padding: 16px 32px;
 	margin-top: 32px;
 	transition: 500ms;
 	border: none;
 }
-
-
 .btn.event:hover,
 .btn.event:focus,
 .btn.event:active {
@@ -415,20 +383,16 @@ body {
 #header .explore-btn .btn:focus {
 	background-position: -791px -31px;
 }
-
-	/* tulisan ayodonor di dashboard */
 #header .title-event {
-	font: 100% PlayfairDisplay-Italic-VariableFont_wght;
-	font-style: italic;
-	font-size: 7rem;
+	font: 100% SFProBold;
+	font-size: 5rem;
 	-webkit-background-clip: text;
+/*	background-clip: text;*/
+	line-height: 0.95;
 }
 @media only screen and (min-width: 992px) {
-
-	/* tulisan ayodonor di dashboard */
-
 	#header .title-event {
-		font-size: 6rem;
+		font-size: 10rem;
 	}
 }
 #header .title-event.a {
@@ -707,6 +671,15 @@ body {
 #ab {
 	background: var(--bg-primary);
 }
+#ab .logo {
+/*	background-image: linear-gradient(
+		to right,
+		#02bec4 0%,
+		#0284a8 55%,
+		#114375 90%,
+		#253959 100%
+	); */
+
 	background-image: linear-gradient(
 		to right,
 		#dd514a 0%,
@@ -799,78 +772,7 @@ body {
 		background-position: unset;
 	}
 }
-#footer .logo {
-	z-index: 1;
-}
-#footer .logo img {
-	width: 80px;
-	margin-bottom: 9vh;
-}
-#footer .sosmed {
-	display: inline-block;
-	text-align: center;
-	z-index: 1;
-}
-#footer .sosmed a img {
-	width: 42px;
-	margin: 3px;
-	opacity: 0.5;
-}
-#footer .sosmed a img:hover {
-	opacity: 1;
-}
-#footer .copyright {
-	position: relative;
-	top: 23vh;
-	color: white;
-}
-section.event {
-	padding: 0 10%;
-}
-section.event .title {
-	font-size: 1.5rem;
-	color: white;
-	display: inline-block;
-}
-section.event .bottom-line {
-	height: 3px;
-	width: 152px;
-	margin: 16px 0;
-}
-section.event .bottom-line.a {
-	background-image: linear-gradient(to right, #efc94c, #f5a503);
-}
-section.event .bottom-line.o {
-	background-image: linear-gradient(
-		to right,
-		#dd514a 0%,
-		#ec4863 30%,
-		#a73e5c 70%,
-		#5c2849 100%
-	);
-}
-section.event .bottom-line.b {
-	background-image: linear-gradient(
-		to right,
-		#b8ea68 0%,
-		#b8ea68 25%,
-		#00a588 75%,
-		#007269 100%
-	);
-}
-section.event .bottom-line.ab {
-	background-image: linear-gradient(
-		to right,
-		#02bec4 0%,
-		#0284a8 55%,
-		#114375 90%,
-		#253959 100%
-	);
-}
-section.event p {
-	font-size: 1.05rem;
-	color: #999;
-}
+
 #intro {
 	background-image: linear-gradient(#282828, #000);
 }
@@ -916,98 +818,10 @@ section.event p {
 	font-size: 1.1rem;
 	line-height: 1.4;
 }
-#region .map {
-	margin-top: 32px;
-}
-#region .map img {
-	width: 100%;
-}
-#timeline .timeline {
-	margin-top: 32px;
-}
-#timeline .timeline img {
-	width: 100%;
-}
-@media only screen and (min-width: 576px) {
-	#fasilitas .mcontainer {
-		display: flex;
-	}
-	#fasilitas .mcontainer .left-side {
-		width: 40%;
-		max-width: 240px;
-		margin-right: 32px;
-	}
-	#fasilitas .mcontainer .right-side {
-		max-width: 272px;
-	}
-}
-#hadiah p {
-	margin-bottom: 0;
-}
-#hadiah [class*="juara-"],
-#hadiah [class*="harapan-"] {
-	font: 100% SFProBold;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	margin-bottom: 0.5em;
-}
-#hadiah [class*="juara-"].a,
-#hadiah [class*="harapan-"].a {
-	background-image: linear-gradient(to right, #efc94c, #f5a503);
-}
-#hadiah [class*="juara-"].o,
-#hadiah [class*="harapan-"].o {
-	background-image: linear-gradient(
-		to right,
-		#dd514a 0%,
-		#ec4863 30%,
-		#a73e5c 70%,
-		#5c2849 100%
-	);
-}
-#hadiah [class*="juara-"] {
-	font-size: 2rem;
-}
-#hadiah [class*="harapan-"] {
-	font-size: 1.5rem;
-}
-@media only screen and (min-width: 768px) {
-	#hadiah .mcontainer {
-		display: flex;
-	}
-	#hadiah .mcontainer .left-side {
-		width: 50%;
-	}
-}
-@media only screen and (min-width: 992px) {
-	#hadiah .mcontainer [class*="juara-"] {
-		font-size: 3rem;
-	}
-	#hadiah .mcontainer [class*="harapan-"] {
-		line-height: 1.4;
-		font-size: 2.5rem;
-	}
-}
-#faq .list-pertanyaan {
-	margin-top: 32px;
-}
-#faq .pertanyaan {
-	background: #242424;
-	border-color: #242424;
-	color: white;
-	margin-top: 4px;
-}
-#faq .pertanyaan .card-header {
-	font: 100% SFProBold;
-	background: #242424;
-	border-radius: 0.25rem;
-	cursor: pointer;
-}
-#faq .pertanyaan .card-body {
-	border-radius: 0.25rem;
-	background: var(--bg-primary);
-}
+
+
+
+
 @media only screen and (min-width: 768px) {
 	#cp .mcontainer {
 		display: flex;
@@ -1025,8 +839,6 @@ section.event p {
 	padding: 88px 10%;
 }
 @media only screen and (min-width: 768px) {
-	/*padding login*/
-
 	#register {
 		padding: 128px 20%;
 	}
@@ -1035,8 +847,8 @@ section.event p {
 #register .bottom-line {
 	z-index: 1;
 }
-
 #register .mesh {
+	/* background-image: url("../../assets/img/a.png"); */
 	background-size: cover;
 	background-position: 176px -223px;
 	background-repeat: no-repeat;
@@ -1046,10 +858,7 @@ section.event p {
 	top: 0;
 	right: 0;
 }
-
 @media only screen and (min-width: 992px) {
-
-	/*img di login */
 	#register .mesh {
 		background-position: 218px -425px;
 		width: 900px;
@@ -1064,13 +873,10 @@ section.event p {
 		width: 70%;
 	}
 }
-
-/*pengumuman */
 #dashboard {
 	background: white;
 	font: 100% SFProRegular;
 }
-
 #dashboard nav .footer,
 #dashboard nav .mesh {
 	display: none;
@@ -1092,25 +898,18 @@ section.event p {
 		padding: 48px 0;
 		margin: 0;
 	}
-
-	/*margin dashboard pengumuman */
 	#dashboard nav .navbar-collapse {
 		margin-top: 16px;
 	}
-
-	/*aturan text di dashboard pengumuman */
 	#dashboard nav .navbar-nav {
 		display: block;
 		margin: auto;
 		text-align: left;
 		width: 100%;
 	}
-
 	#dashboard nav .navbar-nav .nav-item {
 		width: 100%;
 	}
-
-	/*dashboard pengumuman */
 	#dashboard nav .navbar-nav .nav-item .nav-link {
 		color: white;
 		padding: 1.5rem;
@@ -1120,13 +919,9 @@ section.event p {
 	#dashboard nav .navbar-nav .nav-item .nav-link:active {
 		background: #555;
 	}
-
 	#dashboard nav .navbar-nav .nav-item.show {
 		background: #555;
 	}
-
-	/*dropdown menu di dashboard pengumuman */
-
 	#dashboard nav .navbar-nav .dropdown-menu {
 		width: 100%;
 		color: white;
@@ -1136,19 +931,16 @@ section.event p {
 		padding: 0;
 		top: 100%;
 	}
-
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item {
 		padding: 1.5rem 3rem;
 		line-height: 0;
 		color: white;
 	}
-
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:hover,
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:focus,
 	#dashboard nav .navbar-nav .dropdown-menu .dropdown-item:active {
 		background: #555;
 	}
-
 	#dashboard nav .footer {
 		display: block;
 		color: #999;
@@ -1179,13 +971,9 @@ section.event p {
 		padding: 32px;	
 	}
 }
-
-/*tulisan data diri di dashboard*/
-
 #dashboard .dashboard-container .title {
 	font-family: SFProBold;
 	text-align: center;
-	font-size: 2rem;
 }
 
 #dashboard .dashboard-dalam {
@@ -1199,13 +987,5 @@ section.event p {
 	height: 3rem;
 	margin-left: 6px;
 }
-#sponsor {
-	text-align: center;
-	background: white;
-	padding: 1rem 0rem;
-}
 
-
-
-
-
+/*# sourceMappingURL=main.css.map */
