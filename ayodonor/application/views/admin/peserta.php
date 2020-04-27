@@ -144,9 +144,9 @@
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
-        <!-- <a class="navbar-brand" href="#">
-            <img src="<?= base_url() ?>assets/img/outerfest_logo_sml.png" alt="logo">
-        </a> -->
+        <a class="navbar-brand" href="#">
+            <img src="<?= base_url() ?>assets/img/logo1.png" alt="logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
