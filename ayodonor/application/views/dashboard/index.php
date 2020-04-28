@@ -241,9 +241,54 @@
                     </div>
                 </div>
             </section>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPeserta" data-nama="<?= $loggedin['nama'] ?>" data-id="<?= $loggedin['id_peserta'] ?>" data-instansi="<?= $loggedin['instansi'] ?>"data-email="<?= $loggedin['email'] ?>" data-noHP="<?= $loggedin['noHP'] ?>"  >Edit</button>
         </div>
     </div>
     <!-- end main -->
+
+    <!--Modal-->
+<div class="modal fade" id="editPeserta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ubah Peserta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="pesertaEdit" action="<?= base_url('user/editPeserta') ?>" method="POST">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control" id="nama" placeholder="nama" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="email" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="instansi">instansi</label>
+                            <input type="text" name="instansi" class="form-control" id="instansi" placeholder="instansi" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="asal">asal</label>
+                            <input type="text" name="asal" class="form-control" id="asal" placeholder="asal" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="nohp">nohp</label>
+                            <input type="text" name="nohp" class="form-control" id="nohp" placeholder="nohp" value="">
+                        </div>
+                        <input type="hidden" id="id_peserta" name="id_peserta" value="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="submit" form="pesertaEdit" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- start footer -->
 
     <!-- end footer -->
@@ -253,7 +298,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="<?= base_url(); ?>assets/js/main.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>assets/js/css3-animate-it.js"></script>
-
+    <script type="text/javascript">
+            $(document).ready(function() {
+            // $('#ex1').zoom();
+            $('#table').DataTable();
+        })
+            $('#editPeserta').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var id_peserta = button.data('id') // Extract info from data-* attributes
+            var nama = button.data('nama') // Extract info from data-* attributes
+            var email = button.data('email')
+            var instansi = button.data('instansi')
+            var asal = button.data('asal')
+            var nohp = button.data('nohp')
+            var status = button.data('status') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-body #id_peserta').attr('value', id_peserta)
+            modal.find('.modal-body #nama').val(nama)
+            modal.find('.modal-body #email').val(email)
+            modal.find('.modal-body #instansi').val(instansi)
+            modal.find('.modal-body #asal').val(asal)
+            modal.find('.modal-body #nohp').val(nohp)
+            modal.find('.modal-body #status').val(status)
+        })
+    </script>
 </body>
 
 </html>

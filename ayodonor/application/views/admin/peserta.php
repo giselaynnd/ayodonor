@@ -161,6 +161,9 @@
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/pengumuman') ?>">PENGUMUMAN</a>
                 </li>
+                 <li class="nav-item">
+                    <a class="scroll nav-link" href="<?= base_url('admin/tempat_donor') ?>">TEMPAT DONOR</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         AKUN
@@ -201,7 +204,6 @@
                 <table class="table table-hover table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Instansi</th>
                             <th scope="col">Email</th>
@@ -214,7 +216,6 @@
                         <?php
                         foreach ($peserta as $d) { ?>
                             <tr>
-                                <th scope="row"><?= $d['id_peserta'] ?></th>
                                 <td><?= $d['nama'] ?></td>
                                 <td><?= $d['instansi'] ?></td>
                                 <td><?= $d['email'] ?></td>
@@ -232,34 +233,53 @@
             </div>
         </div>
     <!-- Modal -->
-    <div class="modal fade" id="editPeserta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+   <div class="modal fade" id="editPeserta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Ubah Data Peserta</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ubah Peserta</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="pengumumanEdit" action="editPengumuman" method="POST">
+                    <form id="pesertaEdit" action="<?= base_url('admin/editPeserta') ?>" method="POST">
                         <div class="form-group">
-                            <label for="judul">id_peserta</label>
-                            <input type="text" name="id_peserta" class="form-control" id="id_peserta" value="<?= $d['id_peserta'] ?>">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control" id="nama" placeholder="nama" value="">
                         </div>
                         <div class="form-group">
-                            <label for="judul">Judul</label>
-                            <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman" >
+                            <label for="email">email</label>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="email" value="">
                         </div>
                         <div class="form-group">
-                            <label for="deskripsi">Deskripsi</label>
-                            <textarea class="form-control" name="description" id="deskripsi" rows="3" placeholder="Deskripsi pengumuman" ></textarea>
+                            <label for="instansi">instansi</label>
+                            <input type="text" name="instansi" class="form-control" id="instansi" placeholder="instansi" value="">
                         </div>
+                        <div class="form-group">
+                            <label for="asal">asal</label>
+                            <input type="text" name="asal" class="form-control" id="asal" placeholder="asal" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="nohp">nohp</label>
+                            <input type="text" name="nohp" class="form-control" id="nohp" placeholder="nohp" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="1">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="id_peserta" name="id_peserta" value="">
+                        <input type="hidden" id="status" name="status" value="">
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="submit" form="pengumumanEdit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" form="pesertaEdit" class="btn btn-primary">Simpan</button>
                 </div>
             </div>
         </div>
@@ -274,11 +294,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="<?= base_url() ?>assets/js/main.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.zoom.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/css3-animate-it.js"></script>
 
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function() {
+            // $('#ex1').zoom();
+            $('#table').DataTable();
+        })
+            $('#editPeserta').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var id_peserta = button.data('id') // Extract info from data-* attributes
+            var nama = button.data('nama') // Extract info from data-* attributes
+            var email = button.data('email')
+            var instansi = button.data('instansi')
+            var asal = button.data('asal')
+            var nohp = button.data('nohp')
+            var status = button.data('status') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-body #id_peserta').attr('value', id_peserta)
+            modal.find('.modal-body #nama').val(nama)
+            modal.find('.modal-body #email').val(email)
+            modal.find('.modal-body #instansi').val(instansi)
+            modal.find('.modal-body #asal').val(asal)
+            modal.find('.modal-body #nohp').val(nohp)
+            modal.find('.modal-body #status').val(status)
+        })
+    </script>
+
 </body>
 
 </html>

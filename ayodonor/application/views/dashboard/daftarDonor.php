@@ -184,7 +184,16 @@
                     <div class="card alert-secondary mb-3">
                         <div class="card-body">
                             <p class="card-title"><b><?= $data['nama_tempat'] ?></b>
-                                <span style="float: right;"><?= $data['status'] ?></span></p>
+                                <span style="float: right;">
+                                    <?php if ($data['status'] == 0){
+                                            echo "belum membuthukan donor darah";
+                                        }else{
+                                            echo "membutuhkan donor darah";
+                                        }
+                                    ?>
+                                        
+                                    </span>
+                            </p>
                             <p class="card-text"><?= $data['alamat_tempat'] ?></p>
                             <p>
                                 <a class="btn btn-success" href="<?= base_url('user'); ?>/form_donor/<?=$data['id_tempat']; ?>">Daftar</a>

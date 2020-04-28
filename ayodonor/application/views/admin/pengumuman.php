@@ -160,6 +160,9 @@
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/pengumuman') ?>">PENGUMUMAN</a>
                 </li>
+                 <li class="nav-item">
+                    <a class="scroll nav-link" href="<?= base_url('admin/tempat_donor') ?>">TEMPAT DONOR</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         AKUN
@@ -201,7 +204,6 @@
                 <table class="table table-hover table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Judul</th>
                             <th scope="col">Deskripsi</th>
                             <th scope="col">Tanggal</th>
@@ -213,14 +215,13 @@
                         <?php
                         foreach ($pengumuman as $d) { ?>
                             <tr>
-                                <th scope="row"><?= $d['id_pengumuman'] ?></th>
                                 <td><?= $d['title'] ?></td>
                                 <td><?= $d['description'] ?></td>
                                 <td><?= $d['date_created'] ?></td>
                                 <td><?= $this->Admins->getAdminById($d['id_admin'])['nama'] ?></td>
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPengumuman<?= $d['id_pengumuman']?>">Edit</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPengumuman" data-title="<?= $d['title'] ?>" data-id="<?= $d['id_pengumuman'] ?>" data-desc="<?= $d['description'] ?>">Edit</button>
                                         <a href="<?= base_url('admin/hapusPengumuman') ?>/<?= $d['id_pengumuman'] ?>" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
@@ -262,9 +263,8 @@
         </div>
     </div>
     <!-- Modal -->
-<?php
-foreach ($pengumuman as $d) { ?>
-    <div class="modal fade" id="editPengumuman<?= $d['id_pengumuman']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+    <div class="modal fade" id="editPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -275,10 +275,7 @@ foreach ($pengumuman as $d) { ?>
                 </div>
                 <div class="modal-body">
                     <form id="pengumumanEdit" action="editPengumuman" method="POST">
-                        <div class="form-group">
-                            <label for="judul">ID_pengumuman</label>
-                            <input type="text" name="id_pengumuman" class="form-control" id="judul" placeholder="ID" value="<?= $d['id_pengumuman']?>">
-                        </div>
+                        <input type="hidden" id="id_pengumuman" name="id_pengumuman">
                         <div class="form-group">
                             <label for="judul">Judul</label>
                             <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman" value="<?= $d['title']?>">
@@ -296,7 +293,7 @@ foreach ($pengumuman as $d) { ?>
             </div>
         </div>
     </div>
-<?php } ?>
+
     <!-- end main -->
     <!-- start footer -->
 
@@ -307,12 +304,29 @@ foreach ($pengumuman as $d) { ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="<?= base_url() ?>assets/js/main.js"></script>
-    <script src="<?= base_url() ?>assets/js/jquery.zoom.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>assets/js/css3-animate-it.js"></script>
 
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-   
+     <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+        });
+        $('#editPengumuman').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var title = button.data('title') // Extract info from data-* attributes
+            var id = button.data('id')
+            var desc = button.data('desc') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            // console.log(id)
+            modal.find('.modal-body #id_pengumuman').attr('value', id)
+            modal.find('.modal-body #judul').val(title)
+            modal.find('.modal-body #deskripsi').val(desc)
+        })
+    </script>
+
 </body>
 
 </html>

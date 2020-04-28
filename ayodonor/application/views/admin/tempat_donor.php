@@ -21,12 +21,10 @@
             width: 80%;
         }
 
-        .alert-secondary{
-            color: white;
+        .alert-secondary {
             background-color: #79101a;
+            color: white;
         }
-
-
         #nav-tab a {
             display: flex;
             height: 50px;
@@ -109,7 +107,7 @@
         p {
             color: black !important;
         }
-
+/*
         .bukalapak {
             color: black !important;
             padding-left: 0.5rem !important;
@@ -119,7 +117,7 @@
         .bukalapak img {
             height: 3rem;
             margin-left: 6px;
-        }
+        }*/
 
         .npclogo {
             display: inline-block;
@@ -162,7 +160,7 @@
                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/pengumuman') ?>">PENGUMUMAN</a>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
                     <a class="scroll nav-link" href="<?= base_url('admin/tempat_donor') ?>">TEMPAT DONOR</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -182,82 +180,128 @@
     <!-- end head -->
     <!-- start body -->
 
-    <div class="dashboard-container">
+     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
-                Selamat datang, <b><?= $this->session->userdata('namaAdmin') ?></b> !
+                Selamat datang, <b><?= $this->session->userdata('namaAdmin')?></b> !
             </div>
             <div class="container">
                 <div class="mt-4">
                     <div class="row">
                         <div class="col">
-                            <h3 class="title">Dashboard</h3>
+                            <h3 class="title">Tempat Donor</h3>
                             <hr>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 card text-white bg-primary">
-                            <h4>Total Peserta</h4>
-                            <h4><?= $total ?></h4>
-                        </div>
-                        <div class="col-lg-3 col-md-3 card text-white bg-success">
-                            <h4>Terdaftar</h4>
-                            <h4><?= $terdaftar ?></h4>
-                        </div>
-                        <div class="col-lg-3 col-md-3 text-white bg-warning card">
-                            <h4>Need Approval</h4>
-                            <h4><?= $approve ?></h4>
-                        </div>
-                        <div class="col-lg-3 col-md-3 text-white bg-danger card">
-                            <h4>Closed</h4>
-                            <h4><?= $closed ?></h4>
-                        </div>
-                    </div>
                 </div>
-                <h3 class="title mt-4">Need Approval</h3>
-                <hr>
+                <div class="input-group mb-3">
+                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#tambahTempatDonor">Tempat Donor Baru</button>
+                    <!-- <input type="text" class="form-control" placeholder="Find an announcement" aria-label="Find ur girlfriends" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
+                    </div> -->
+                </div>
                 <table class="table table-hover table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Keterangan</th>
+                            <th scope="col">Nama Tempat</th>
+                            <th scope="col">Alamat Tempat</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($peserta as $d) { ?>
+                        <?php
+                        foreach ($tempat_donor as $d) { ?>
                             <tr>
-                                <th scope="row"><?= $d['id_donor'] ?></th>
-                                <td><?= $this->Peserta->getPesertabyId($d['id_peserta'])['nama'] ?></td>
-                                <td>Mendaftarkan donor di <?= strtoupper($this->Donor->getKetTempat($d['id_peserta'])['nama_tempat']) ?>, Bergolongan darah <?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['gol_darah']) ?><?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['rhesus']) ?>, mempunyai penyakit : <?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['penyakit']) ?> </td>
+                                <td><?= $d['nama_tempat'] ?></td>
+                                <td><?= $d['alamat_tempat'] ?></td>
+                                <td><?= $d['status'] ?></td>
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                        <?php
-                                        if ($d['status'] == 3) {
-                                            echo '<button type="button" class="btn btn-success" disabled>Approved</button>';
-                                        } else {
-                                            echo '<a href=' . base_url('admin/approve/') . $d['id_peserta'] . ' class="btn btn-warning">Approve</a>';
-                                        }
-                                        ?>
-
-                                    </div>
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                                        <?php
-                                            echo '<a href=' . base_url('admin/nonapprove/') . $d['id_peserta'] . ' text-white class="btn btn-danger">Dont Approve</a>';
-                                        ?>
-
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-id="<?= $d['id_tempat'] ?>" data-target="#editTempatDonor" data-nama="<?= $d['nama_tempat'] ?>" data-alamat="<?= $d['alamat_tempat'] ?>" data-status="<?= $d['status'] ?>">Edit</button>
+                                        <a href="<?= base_url('admin/hapusTempatDonor') ?>/<?= $d['id_tempat'] ?>" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
                             </tr>
-                        <?php
-                    }; ?>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     <!-- Modal -->
+
+   <div class="modal fade" id="tambahTempatDonor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tempat Donor Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="TempatDonorBaru" action="addTempatDonor" method="POST">
+                        <div class="form-group">
+                            <label for="nama_tempat">Nama Tempat</label>
+                            <input type="text" name="nama_tempat" class="form-control" id="nama_tempat" placeholder="Nama Tempat">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat_tempat">Alamat Tempat</label>
+                            <input type="text" name="alamat_tempat" class="form-control" id="alamat_tempat" placeholder="Alamat Tempat">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <input type="text" name="status" class="form-control" id="status" placeholder="Status">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="submit" form="TempatDonorBaru" class="btn btn-primary">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <div class="modal fade" id="editTempatDonor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ubah Tempat Donor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="TempatDonorEdit" action="editTempatDonor" method="POST">
+                        <input type="hidden" id="id_tempat" name="id_tempat">
+                        <div class="form-group">
+                            <label for="nama">Nama Tempat</label>
+                            <input type="text" name="nama" class="form-control" id="nama_tempat" placeholder="Nama Tempat">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat Tempat</label>
+                            <input type="text" name="alamat" class="form-control" id="alamat_tempat" placeholder="Alamat Tempat">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="submit" form="TempatDonorEdit" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- end main -->
     <!-- start footer -->
@@ -273,7 +317,27 @@
 
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+     <script>
+        $(document).ready(function() {
+            $('#table').DataTable();  //jquery
+        });
+        $('#editTempatDonor').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var nama = button.data('nama') // Extract info from data-* attributes
+            var id = button.data('id')
+            var alamat = button.data('alamat')
+            var status = button.data('status') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            // console.log(id)
+            modal.find('.modal-body #id_tempat').attr('value', id)
+            modal.find('.modal-body #nama_tempat').val(nama)
+            modal.find('.modal-body #alamat_tempat').val(alamat)
+            modal.find('.modal-body #status').val(status)
+        })
     </script>
+
 </body>
 
 </html>

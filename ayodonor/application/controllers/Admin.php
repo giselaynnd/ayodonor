@@ -72,6 +72,12 @@ class Admin extends CI_Controller
         $data['pengumuman'] = $this->Pengumuman->fetch();
         $this->load->view('admin/pengumuman', $data);
     }
+    public function tempat_donor()
+    {
+        $this->isLoggedIn();
+        $data['tempat_donor'] = $this->Tempat_donor->fetch();
+        $this->load->view('admin/tempat_donor', $data);
+    }
     public function peserta()
     {
         $this->isLoggedIn();
@@ -82,6 +88,21 @@ class Admin extends CI_Controller
     {
         session_destroy();
         redirect(base_url());
+    }
+    public function addTempatDonor()
+    {
+        $this->Tempat_donor->addTempatDonor();
+        redirect('admin/tempat_donor');
+    }
+       public function editTempatDonor()
+    {
+        $this->Tempat_donor->editTempatDonor();
+        redirect('admin/tempat_donor');
+    }
+    public function hapusTempatDonor($id)
+    {
+        $this->Tempat_donor->delete($id);
+        redirect('admin/tempat_donor');
     }
     public function addPengumuman()
     {

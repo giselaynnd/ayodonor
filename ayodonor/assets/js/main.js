@@ -9,33 +9,3 @@ window.onscroll = function () {
 		$('nav').addClass('bg-nav-primary');
 	}
 }
-
-$(function () {
-	$(".explore-btn").find("a").click(function (e) {
-		e.preventDefault();
-		var section = $(this).attr("href");
-		$("html, body").animate({
-			scrollTop: $(section).offset().top
-		});
-	});
-});
-
-$('.material-input').each(function () {
-	check($(this));
-});
-
-$('.material-input').on('focusout', function () {
-	check($(this));
-});
-
-function check($input) {
-	if (!$input.val()) {
-		$input.removeClass('has-value');
-		return;
-	}
-	if ($input.val().length > 0) {
-		$input.addClass('has-value');
-	} else {
-		$input.removeClass('has-value');
-	}
-}

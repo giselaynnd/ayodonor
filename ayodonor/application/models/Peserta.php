@@ -134,6 +134,19 @@ class Peserta extends CI_Model
             'asal' => $this->input->post('asal', true),
             'nohp' => $this->input->post('nohp', true),
             'email' => $this->input->post('email', true),
+            'status' => $this->input->post('status', true),
+        ];
+        $this->db->where($where)->update('peserta', $data);
+    }
+        public function edit2()
+    {
+        $where = array('id_peserta' => $this->input->post('id_peserta'));
+        $data = [
+            'nama' => $this->input->post('nama', true),
+            'instansi' => $this->input->post('instansi', true),
+            'asal' => $this->input->post('asal', true),
+            'nohp' => $this->input->post('nohp', true),
+            'email' => $this->input->post('email', true),
         ];
         $this->db->where($where)->update('peserta', $data);
     }
