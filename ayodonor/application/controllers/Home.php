@@ -32,24 +32,23 @@ class Home extends CI_Controller
     private function _login()
     {
         $user = $this->Peserta->getPeserta();
-        print_r($user);
         if (!$user) {
             $this->session->set_flashdata('message', 'Email belum terdaftar.');
             redirect(base_url('Home/login'));
             // echo "email belum terdaftar";
         } else {
-            if ($this->input->post('password') !== $user['password']) {
-                $this->session->set_flashdata('message', 'Password yang anda masukan salah.');
-                redirect(base_url('Home/login'));
-                
-            } else {
-                $data = [
+            if (password_verify($this->input->post('password'), $user['password'])) {
+                 $data = [
                     'id_peserta' => $user['id_peserta'],
                     'email' => $user['email'],
                     'nama' => ucwords($user['nama']),
                 ];
                 $this->session->set_userdata($data);
-                redirect(base_url('User'));
+                redirect(base_url('User'));   
+            } else {
+                $this->session->set_flashdata('message', 'Password yang anda masukan salah.');
+                redirect(base_url('Home/login'));
+                
             }
         }
     }

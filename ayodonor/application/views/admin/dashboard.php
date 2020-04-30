@@ -170,7 +170,6 @@
                         AKUN
                     </a>
                     <div class="dropdown-menu dashboard-dropdown" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Ganti Password</a>
                         <a class="dropdown-item" href="<?= base_url('admin/logout') ?>">Logout</a>
                     </div>
                 </li>

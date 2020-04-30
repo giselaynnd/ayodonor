@@ -15,33 +15,6 @@
             position: relative;
             z-index: 99;
         }
-
-        #register .form {
-            width: 80%;
-        }
-
-        #nav-tab a {
-            display: flex;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            color: #777;
-            text-decoration: none;
-            font: 100% SFProBold;
-            font-size: 1.5rem;
-        }
-
-        #nav-tab .active {
-            border-bottom: 3px solid #a73e5c;
-            color: #fff;
-        }
-
-        .nav-tabs {
-            width: 60%;
-            border: 0;
-        }
-
         html,
         body {
             height: 100%;
@@ -52,72 +25,18 @@
             position: relative;
             padding-bottom: 0 !important;
         }
-
-
-        @media only screen and (min-width: 992px) {
-            #sponsor {
-                margin-left: -32px;
-            }
-        }
-
-        #sponsor {
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            background: white;
-            padding: 1rem 0rem;
-            margin-top: 64px;
-            margin-left: -5%;
-            width: 100%;
-        }
-
         .event {
-            padding: 0 !important;
+            padding: 1 !important;
         }
 
         .title {
             color: black !important;
         }
-
-        .subtitle {
-            font-family: SFProRegular;
-            font-size: .7em;
-        }
-
         #header {
             height: unset;
             background: white;
             padding: 0;
         }
-
-        .nama {
-            font-size: 1.1rem;
-        }
-
-        ul.info {
-            list-style-type: none;
-            padding-left: 16px;
-        }
-
-        p {
-            color: black !important;
-        }
-
-        .bukalapak {
-            color: black !important;
-            padding-left: 0.5rem !important;
-            display: inline-block !important;
-        }
-
-        .bukalapak img {
-            height: 3rem;
-            margin-left: 6px;
-        }
-
-        .npclogo {
-            display: inline-block;
-        }
-
         .center {
             text-align: center;
         }
@@ -168,19 +87,19 @@
     <div class="dashboard-container">
         <h1>Register</h1>
             <form class="form" action="<?= base_url('user');?>/registDonor/<?=$id_tempat.'/'.$loggedin['id_peserta']; ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
-                <div class="material-form npc">
-                    <label class="material-label">Golongan Darah</label>
+                <div class="material-form">
                     <input type="text" class="material-input" name="golonganDarah" value="<?= set_value('golDarah'); ?>" required>
+                    <label class="material-label">Golongan Darah</label>
                 </div>
-                <div class="material-form npc">
-                    <label class="material-label">Rhesus</label>
+                <div class="material-form">
                     <input type="text" class="material-input" name="rhesus" value="<?= set_value('rhesus'); ?>" required>
+                    <label class="material-label">Rhesus</label>
                 </div>
-                <div class="material-form npc">
-                    <label class="material-label">Riwayat Penyakit yang diderita</label>
+                <div class="material-form">
                     <input type="text" class="material-input" name="penyakit" value="<?= set_value('penyakit'); ?>" required>
+                    <label class="material-label">Riwayat Penyakit yang diderita</label>
                 </div> 
-                <button type="submit" class="btn event btn-succsess">Register</button>
+                <button type="submit" class="btn event btn-secondary">Register</button>
             </form>
     </div>
     <!-- end main -->
@@ -188,7 +107,6 @@
 
     <!-- end footer -->
     <!-- SCRIPT HERE -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="<?= base_url(); ?>assets/js/main.js"></script>

@@ -16,7 +16,7 @@
 body {
 	background: var(--bg-primary); /*ntuk light tulisan selanjutnya di halaman login */
 }
-
+.
 .site-header {					/*untuk header memanggil class secara lokal*/
     position: fixed;
     background: #781616fc;
@@ -64,11 +64,12 @@ rga berwarna merah*/
 		color: rgba(0, 0, 0, 0.9);
 	}
 }
+
 .navbar .dropdown-menu {
 	background: transparent;
 	text-align: center;
 	border: unset;
-}
+}/*digunakan untuk dropdown menu, kaya pas pencet akun nah kan ada logout, si itunya*/
 @media only screen and (min-width: 992px) {
 	.navbar .dropdown-menu {
 		background: rgba(255, 255, 255, 0.6);

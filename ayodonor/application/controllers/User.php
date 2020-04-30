@@ -22,7 +22,7 @@ class User extends CI_Controller
             $this->load->view('dashboard/daftarDonor', $data);
         }
     }
-
+    
     public function form_Donor($id_tempat)
     {
         if (!$this->session->userdata('email')) {

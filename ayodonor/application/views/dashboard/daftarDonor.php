@@ -9,39 +9,15 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
-    <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
     <style>
         .form {
             position: relative;
             z-index: 99;
         }
-
-        #register .form {
-            width: 80%;
+        .alert-secondary {
+            background-color: #79101a;
+            color: white;
         }
-
-        #nav-tab a {
-            display: flex;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            color: #777;
-            text-decoration: none;
-            font: 100% SFProBold;
-            font-size: 1.5rem;
-        }
-
-        #nav-tab .active {
-            border-bottom: 3px solid #a73e5c;
-            color: #fff;
-        }
-
-        .nav-tabs {
-            width: 60%;
-            border: 0;
-        }
-
         html,
         body {
             height: 100%;
@@ -59,10 +35,8 @@
                 margin-left: -32px;
             }
         }
-
         #sponsor {
             position: absolute;
-            bottom: 0;
             text-align: center;
             background: white;
             padding: 1rem 0rem;
@@ -70,54 +44,14 @@
             margin-left: -5%;
             width: 100%;
         }
-
-        .event {
-            padding: 0 !important;
-        }
-
         .title {
             color: black !important;
         }
-
-        .subtitle {
-            font-family: SFProRegular;
-            font-size: .7em;
-        }
-
         #header {
             height: unset;
             background: white;
             padding: 0;
         }
-
-        .nama {
-            font-size: 1.1rem;
-        }
-
-        ul.info {
-            list-style-type: none;
-            padding-left: 16px;
-        }
-
-        p {
-            color: black !important;
-        }
-
-        .bukalapak {
-            color: black !important;
-            padding-left: 0.5rem !important;
-            display: inline-block !important;
-        }
-
-        .bukalapak img {
-            height: 3rem;
-            margin-left: 6px;
-        }
-
-        .npclogo {
-            display: inline-block;
-        }
-
         .center {
             text-align: center;
         }
@@ -161,7 +95,7 @@
                 </li>
             </ul>
         </div>
-        <div class="footer">&copy; Schematics 2018</div>
+        <div class="footer">&copy; AyoDonor.com</div>
     </nav>
     <!-- end head -->
     <!-- start body -->
@@ -196,12 +130,16 @@
                             </p>
                             <p class="card-text"><?= $data['alamat_tempat'] ?></p>
                             <p>
-                                <a class="btn btn-success" href="<?= base_url('user'); ?>/form_donor/<?=$data['id_tempat']; ?>">Daftar</a>
+                                <a class="btn btn-primary" href="<?= base_url('user'); ?>/form_donor/<?=$data['id_tempat']; ?>">Daftar</a>
                             </p>
                         </div>
                     </div>
                 <?php }; ?>
             </div>
+        </div>
+        <div id="sponsor">
+            <div class="sponsor1">
+                <img src="<?= base_url(); ?>assets/img/logo1.png" class="sponsor1child">
         </div>
     </div>
     <!-- end main -->

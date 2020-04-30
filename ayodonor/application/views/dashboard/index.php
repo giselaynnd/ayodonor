@@ -11,37 +11,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
     <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
     <style>
-        .form {
-            position: relative;
-            z-index: 99;
-        }
-
-        #register .form {
-            width: 80%;
-        }
-
-        #nav-tab a {
-            display: flex;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            color: #777;
-            text-decoration: none;
-            font: 100% SFProBold;
-            font-size: 1.5rem;
-        }
-
-        #nav-tab .active {
-            border-bottom: 3px solid #a73e5c;
-            color: #fff;
-        }
-
-        .nav-tabs {
-            width: 60%;
-            border: 0;
-        }
-
         html,
         body {
             height: 100%;
@@ -53,23 +22,9 @@
             padding-bottom: 0 !important;
         }
 
-
-        @media only screen and (min-width: 992px) {
-            #sponsor {
-                margin-left: -32px;
-            }
-        }
-
-
         .title {
             color: black !important;
         }
-
-        .subtitle {
-            font-family: SFProRegular;
-            font-size: .7em;
-        }
-
         #header {
             height: unset;
             background: white;
@@ -88,53 +43,14 @@
         p {
             color: black !important;
         }
-
-
-        .npclogo {
-            display: inline-block;
-        }
-
         .alert-secondary {
             background-color: #79101a;
             color: white;
         }
-
         .center {
             text-align: center;
         }
 
-        .material-input {
-            color: black;
-        }
-
-
-        .btn.event {
-            font: 100% SFProRegular;
-            margin: 0;
-            padding: 0.5em !important;
-        }
-
-        .custom-file-uploader {
-            position: relative;
-        }
-
-        input[type='file'] {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 5;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: default;
-        }
-
-        #price {
-            font-size: 1.5em;
-        }
     </style>
 </head>
 
@@ -241,7 +157,7 @@
                     </div>
                 </div>
             </section>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPeserta" data-nama="<?= $loggedin['nama'] ?>" data-id="<?= $loggedin['id_peserta'] ?>" data-instansi="<?= $loggedin['instansi'] ?>"data-email="<?= $loggedin['email'] ?>" data-noHP="<?= $loggedin['noHP'] ?>"  >Edit</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPeserta" data-nama="<?= $loggedin['nama'] ?>" data-id="<?= $loggedin['id_peserta'] ?>" data-instansi="<?= $loggedin['instansi'] ?>"data-email="<?= $loggedin['email'] ?>" data-noHP="<?= $loggedin['noHP'] ?>" data-asal="<?= $loggedin['asal'] ?>" >Edit</button>
         </div>
     </div>
     <!-- end main -->

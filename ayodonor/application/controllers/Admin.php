@@ -21,6 +21,7 @@ class Admin extends CI_Controller
             $this->load->view('admin/dashboard', $data);
         }
     }
+
     public function login()
     {
         if ($this->session->userdata('emailAdmin')) {
@@ -51,7 +52,7 @@ class Admin extends CI_Controller
             redirect(base_url('admin/login'));
             // echo var_dump($admin);
         } else {
-            if ($this->input->post('password') !== $admin['password']) {
+            if (!password_verify($this->input->post('password'), $admin['password'])) {
                 $this->session->set_flashdata('message', 'Password yang anda masukan salah.');
                 redirect(base_url('admin/login'));
                 // echo "salah pass";

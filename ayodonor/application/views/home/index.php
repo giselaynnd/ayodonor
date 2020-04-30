@@ -206,18 +206,8 @@
           </div>
         </div>
         <div class="row pt-5">
-          <p class="col-md-6 text-left">
-           
-            Hak Cipta &copy;<script>document.write(new Date().getFullYear());</script>  <i class="icon-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank" ></a>
+          <p class="col-md-6 text-left">Hak Cipta &copy;<script>document.write(new Date().getFullYear());</script>  <i class="icon-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank" ></a>
             
-          </p>
-            
-          <p class="col-md-6 text-right social">
-            <a href="#"><span class="fa fa-tripadvisor"></span></a>
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-twitter"></span></a>
-            <a href="#"><span class="fa fa-linkedin"></span></a>
-            <a href="#"><span class="fa fa-vimeo"></span></a>
           </p>
         </div>
       </div>

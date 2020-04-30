@@ -53,7 +53,7 @@ class Peserta extends CI_Model
             'asal'      => $this->input->post('asal', true),
             'nohp'      => $this->input->post('nohp', true),
             'email'     => $this->input->post('email', true),
-            'password'  => $this->input->post('password', true),
+            'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT)
         ];
 
         // $config['file_name'] = $this->db->query("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'webpro' AND TABLE_NAME = 'peserta'")->row()->AUTO_INCREMENT;
@@ -138,7 +138,8 @@ class Peserta extends CI_Model
         ];
         $this->db->where($where)->update('peserta', $data);
     }
-        public function edit2()
+
+    public function edit2()
     {
         $where = array('id_peserta' => $this->input->post('id_peserta'));
         $data = [
@@ -150,4 +151,5 @@ class Peserta extends CI_Model
         ];
         $this->db->where($where)->update('peserta', $data);
     }
+
 }

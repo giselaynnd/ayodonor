@@ -15,33 +15,6 @@
             position: relative;
             z-index: 99;
         }
-
-        #register .form {
-            width: 80%;
-        }
-
-        #nav-tab a {
-            display: flex;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            color: #777;
-            text-decoration: none;
-            font: 100% SFProBold;
-            font-size: 1.5rem;
-        }
-
-        #nav-tab .active {
-            border-bottom: 3px solid #a73e5c;
-            color: #fff;
-        }
-
-        .nav-tabs {
-            width: 60%;
-            border: 0;
-        }
-
         html,
         body {
             height: 100%;
@@ -65,7 +38,6 @@
 
         #sponsor {
             position: absolute;
-            bottom: 0;
             text-align: center;
             background: white;
             padding: 1rem 0rem;
@@ -82,31 +54,6 @@
         .title {
             color: black !important;
         }
-
-        .subtitle {
-            font-family: SFProRegular;
-            font-size: .7em;
-        }
-
-        #header {
-            height: unset;
-            background: white;
-            padding: 0;
-        }
-
-        .nama {
-            font-size: 1.1rem;
-        }
-
-        ul.info {
-            list-style-type: none;
-            padding-left: 16px;
-        }
-
-        p {
-            color: white !important;
-        }
-
     </style>
 </head>
 
