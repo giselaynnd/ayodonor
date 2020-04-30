@@ -1,4 +1,4 @@
-@font-face {
+@font-face {											/* membuat font text pada web yang menggunakan server dari luar komputer kita */
 	font-family: SFProBold;
 	src: url("../../assets/fonts/SFProBold.ttf");
 }
@@ -14,10 +14,10 @@
 	--bg-primary: rgba(189, 192, 195, 0.5);
 }
 body {
-	background: var(--bg-primary);
+	background: var(--bg-primary); /*ntuk light tulisan selanjutnya di halaman login */
 }
 
-.site-header {
+.site-header {					/*untuk header memanggil class secara lokal*/
     position: fixed;
     background: #781616fc;
 /*    top: 0; */
@@ -27,7 +27,7 @@ body {
     -o-transition: .3s all ease-in-out;
     transition: .3s all ease-in-out;
 }
-.site-hero {
+.site-hero {					/*digunakan untuk memanggil class secara lokal*/
     background-size: 1700px;
     height: 100vh;
     min-height: 700px;
@@ -35,6 +35,7 @@ body {
     position: relative;
 }
 
+/*carousel adalah tag bawaan dari bootsrap 4 yang digunakan untuk slide --- */
 .carousel-item {
 	height: 670px;
 	background-size: cover;
@@ -47,13 +48,14 @@ body {
 .carousel-item .display-4 {
 	margin-top: -440px;
 }
-
+/*section digunakan untuk transisi sebuah slide <> */
 .section {
     padding: 7em 0;
     display: block;
 }
 
-
+/*digunakan untuk dropdown menu seperti AKUN
+rga berwarna merah*/
 @media only screen and (min-width: 992px) {
 	.navbar .navbar-nav > li.dropdown:hover > a,
 	.navbar .navbar-nav > li.dropdown:hover > a:hover,
@@ -95,6 +97,7 @@ body {
 	.navbar .dropdown-menu .dropdown-item:hover,
 	.navbar .dropdown-menu .dropdown-item:focus,
 	.navbar .dropdown-menu .dropdown-item:active {
+/*warna transparan*/
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 }
@@ -103,6 +106,8 @@ body {
 		display: block;
 	}
 }
+/*membuat tampilan web agar tidak patah2 saat ditampilkan
+atau menunjukkan status pemuatan web*/
 .preloader {
 	overflow: hidden;
 }
@@ -128,6 +133,7 @@ body {
 	}
 }
 @media only screen and (min-width: 992px) {
+
 	.bg-nav-secondary:not(.dashboard-nav) {
 		/* background: rgba(39, 39, 39, 0.9) !important; */
 		background : #79101a;
@@ -178,6 +184,8 @@ body {
 	}
 }
 .navbar {
+/*menu, pilihan yang diatas*/
+
 	background: #79101a;
 	font: 100% SFProRegular;
 	padding: 8px 32px;
@@ -262,6 +270,7 @@ body {
 		padding: 24px 96px;*/
 	}
 }
+/*button*/
 .btn.event {
 	font: 100% SFProBold;
 	font-size: 1.5rem;
@@ -311,6 +320,7 @@ body {
 	);
 }
 #header {
+/*agar header diam di tempat*/
 	height: 101vh;
 	display: flex;
 	flex-direction: column;
@@ -341,6 +351,7 @@ body {
 	}
 }
 #header .title {
+/*tulisan pada header*/
 	color: black;
 	font-family: PlayfairDisplay, times, serif;
 	font-weight: bold;
@@ -355,6 +366,7 @@ body {
 #header .tagline {
 	color: black;
 	font: 100% SFProRegular;
+/*mengatur posisi depan atau belakang suatu elemen*/
 	z-index: 1;
 }
 @media only screen and (min-width: 992px) {
@@ -774,6 +786,7 @@ body {
 }
 
 #intro {
+/*mengeksekusi css berdasarkan id tertentu*/
 	background-image: linear-gradient(#282828, #000);
 }
 @media only screen and (min-width: 992px) {
@@ -831,7 +844,9 @@ body {
 		margin-right: 48px;
 	}
 }
+
 #register {
+/*pemanggilan css dengan id*/
 	min-height: 100vh;
 	background-image: var(--bg-primary);
 	display: flex;
@@ -845,6 +860,7 @@ body {
 }
 #register .title,
 #register .bottom-line {
+/*mengontrol susunan elemen yang tumpang tindih*/
 	z-index: 1;
 }
 #register .mesh {
