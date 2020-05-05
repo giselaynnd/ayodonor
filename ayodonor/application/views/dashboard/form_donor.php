@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
-    <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
     <style>
         .form {
             position: relative;
@@ -29,23 +28,11 @@
             padding: 1 !important;
         }
 
-        .title {
-            color: black !important;
-        }
-        #header {
-            height: unset;
-            background: white;
-            padding: 0;
-        }
-        .center {
-            text-align: center;
-        }
     </style>
 </head>
 
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
-        <!-- <div class="mesh"></div> -->
         <a class="navbar-brand" href="#">
             <img src="<?= base_url(); ?>assets/img/logo1.png" alt="logo">
         </a>
@@ -81,8 +68,6 @@
             </ul>
         </div>
     </nav>
-    <!-- end head -->
-    <!-- start body -->
 
     <div class="dashboard-container">
         <h1>Register</h1>
@@ -97,16 +82,12 @@
                 </div>
                 <div class="material-form">
                     <input type="text" class="material-input" name="penyakit" value="<?= set_value('penyakit'); ?>" required>
-                    <label class="material-label">Riwayat Penyakit yang diderita</label>
+                    <label class="material-label">Riwayat Penyakit</label>
                 </div> 
                 <button type="submit" class="btn event btn-secondary">Register</button>
             </form>
     </div>
-    <!-- end main -->
-    <!-- start footer -->
 
-    <!-- end footer -->
-    <!-- SCRIPT HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="<?= base_url(); ?>assets/js/main.js"></script>

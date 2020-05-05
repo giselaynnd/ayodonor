@@ -406,6 +406,7 @@ atau menunjukkan status pemuatan web*/
 @media only screen and (min-width: 992px) {
 	#header .title-event {
 		font-size: 10rem;
+		text-shadow: 2px 2px;
 	}
 }
 #header .title-event.a {
@@ -978,9 +979,11 @@ atau menunjukkan status pemuatan web*/
 		z-index: -1;
 	}
 }
+
 #dashboard .dashboard-container {
 	padding: 114px 5%;
 }
+
 @media only screen and (min-width: 992px) {
 	#dashboard .dashboard-container {
 		width: 70%;

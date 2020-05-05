@@ -5,66 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard - AYODONOR</title>
+    <title>Peserta - AYODONOR</title>
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/animations.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="https://schematics.its.ac.id/css/materialform.css">
+
     <style>
-        .form {
-            position: relative;
-            z-index: 99;
-        }
-
-        #register .form {
-            width: 80%;
-        }
-
         .alert-secondary {
             background-color: #79101a;
             color: white;
         }
 
-        #nav-tab a {
-            display: flex;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex: 1 1 auto;
-            color: #777;
-            text-decoration: none;
-            font: 100% SFProBold;
-            font-size: 1.5rem;
-        }
-
-        #nav-tab .active {
-            border-bottom: 3px solid #a73e5c;
-            color: #fff;
-        }
-
-        .nav-tabs {
-            width: 60%;
-            border: 0;
-        }
 
         html,
         body {
             height: 100%;
         }
 
-        .dashboard-container {
-            min-height: 100%;
-            position: relative;
-            padding-bottom: 0 !important;
-        }
-
-
-
         @media only screen and (min-width: 992px) {
-            #sponsor {
-                margin-left: -32px;
-            }
 
             #dashboard nav {
                 width: 20%;
@@ -77,67 +36,11 @@
             }
         }
 
-        .event {
-            padding: 0 !important;
-        }
 
         .title {
             color: black !important;
         }
 
-        .subtitle {
-            font-family: SFProRegular;
-            font-size: .7em;
-        }
-
-        #header {
-            height: unset;
-            background: white;
-            padding: 0;
-        }
-
-        .nama {
-            font-size: 1.1rem;
-        }
-
-        ul.info {
-            list-style-type: none;
-            padding-left: 16px;
-        }
-
-        p {
-            color: black !important;
-        }
-
-        .bukalapak {
-            color: black !important;
-            padding-left: 0.5rem !important;
-            display: inline-block !important;
-        }
-
-        .bukalapak img {
-            height: 3rem;
-            margin-left: 6px;
-        }
-
-        .npclogo {
-            display: inline-block;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .card {
-            padding: 1em;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0;
-        }
-
-        .card>h4 {
-            margin: 0;
-        }
     </style>
 </head>
 
@@ -169,7 +72,7 @@
                         AKUN
                     </a>
                     <div class="dropdown-menu dashboard-dropdown" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('admin/logout') ?>">Logout</a>
+                        <a class="dropdown-item" href="<?= base_url('admin/logout') ?>">LOGOUT</a>
                     </div>
                 </li>
                 <li class="nav-item ">
@@ -177,8 +80,6 @@
             </ul>
         </div>
     </nav>
-    <!-- end head -->
-    <!-- start body -->
 
      <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
@@ -194,19 +95,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Find ur girlfriends" aria-label="Find ur girlfriends" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
-                    </div>
-                </div> -->
                 <table class="table table-hover table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
                             <th scope="col">Nama</th>
                             <th scope="col">Instansi</th>
                             <th scope="col">Email</th>
-                            <th scope="col">No hp</th>
+                            <th scope="col">Nomor Telp</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -231,6 +126,7 @@
                 </table>
             </div>
         </div>
+
     <!-- Modal -->
    <div class="modal fade" id="editPeserta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -248,19 +144,19 @@
                             <input type="text" name="nama" class="form-control" id="nama" placeholder="nama" value="">
                         </div>
                         <div class="form-group">
-                            <label for="email">email</label>
+                            <label for="email">Email</label>
                             <input type="text" name="email" class="form-control" id="email" placeholder="email" value="">
                         </div>
                         <div class="form-group">
-                            <label for="instansi">instansi</label>
+                            <label for="instansi">Instansi</label>
                             <input type="text" name="instansi" class="form-control" id="instansi" placeholder="instansi" value="">
                         </div>
                         <div class="form-group">
-                            <label for="asal">asal</label>
+                            <label for="asal">Asal</label>
                             <input type="text" name="asal" class="form-control" id="asal" placeholder="asal" value="">
                         </div>
                         <div class="form-group">
-                            <label for="nohp">nohp</label>
+                            <label for="nohp">Nomor Telp</label>
                             <input type="text" name="nohp" class="form-control" id="nohp" placeholder="nohp" value="">
                         </div>
                         <div class="form-group">
@@ -283,11 +179,7 @@
             </div>
         </div>
     </div>
-    <!-- end main -->
-    <!-- start footer -->
 
-    <!-- end footer -->
-    <!-- SCRIPT HERE -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

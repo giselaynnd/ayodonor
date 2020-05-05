@@ -18,6 +18,10 @@
 		a {
 			color: #79101a;
 		}
+
+		.site-header {
+			background-color: #79101a;;
+		}
 	</style>
 </head>
 
