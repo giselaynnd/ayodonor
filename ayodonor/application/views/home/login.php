@@ -57,7 +57,7 @@
                             <a class="scroll nav-link" href="<?= base_url('Home/register'); ?>">REGISTER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="scroll nav-link" href="#abc">ABOUT US</a>
+                            <a class="scroll nav-link" href="<?= base_url('Home/artikel'); ?>">ARTIKEL</a>
                         </li>
                     </ul>
                 </div>

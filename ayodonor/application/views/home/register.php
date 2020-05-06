@@ -52,6 +52,9 @@
                         <li class="nav-item nav-login">
                             <a class="scroll nav-link" href="<?= base_url('home/login'); ?>">LOGIN</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="scroll nav-link" href="<?= base_url('Home/artikel'); ?>">ARTIKEL</a>
+                        </li>
                     </ul>
                 </div>
             </div>

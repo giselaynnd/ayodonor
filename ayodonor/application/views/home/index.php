@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>AYODONOR</title>
+	<title>Home - AYODONOR</title>
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
@@ -15,6 +15,7 @@
 			background-color: #565e67;
 			border-color: #79101a;
 		}
+
 
 		a {
 			color: black;
@@ -35,6 +36,11 @@
             font-size: 3rem;
             z-index: 1;
         }
+
+
+
+       
+
 	</style>
 </head>
 
@@ -61,7 +67,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="scroll nav-link" href="#abc">ABOUT US</a>
+							<a class="scroll nav-link" href="<?= base_url('Home/artikel'); ?>">ARTIKEL</a>
 						</li>
 					</ul>
 				</div>
@@ -164,7 +170,7 @@
 		</div>
 	</section>
 
-
+<!-- carousel -->
 	<section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -199,7 +205,6 @@
 		    	<span class="sr-only">Next</span>
 		  	</a>
 	</section>
-
 </body>
 
 
@@ -211,8 +216,7 @@
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
               <li><a href="#">Tentang Kami</a></li>
-              
-              <li><a href="#">Syarat & ketentuan</a></li>
+              <li><a href="<?= base_url('home/syarat_donor'); ?>">Syarat & Ketentuan Donor</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">

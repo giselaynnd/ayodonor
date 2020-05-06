@@ -68,4 +68,14 @@ class Home extends CI_Controller
             // redirect(base_url('/home/login'));
         }
     }
+
+    public function artikel()
+    {
+        $this->load->view('home/artikel.php');
+    }
+
+    public function skdonor()
+    {
+        $this->load->view('home/syarat_donor.php');
+    }
 }
