@@ -61,11 +61,15 @@ class Home extends CI_Controller
             $this->load->view('home/register');
             // var_dump($this->Peserta->rules); die;
         } else {
-            $this->Peserta->register();
-            $this->session->set_flashdata('SuccessReg', 'success');
-            redirect(base_url('/home/register'));
-            // harusnya redirect ke dashboard
-            // redirect(base_url('/home/login'));
+            if (!$this->Peserta->register()){
+                $this->session->set_flashdata('SuccessReg', 'Failed');
+                redirect(base_url('/home/register'));
+                
+            }else{
+                $this->session->set_flashdata('SuccessReg', 'success');
+                redirect(base_url('/home/login'));
+            }
+            
         }
     }
 
