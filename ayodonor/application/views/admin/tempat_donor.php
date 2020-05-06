@@ -149,7 +149,10 @@
                         </div>
                         <div class="form-group">
                             <label for="status">Status</label>
-                            <input type="text" name="status" class="form-control" id="status" placeholder="Status">
+                            <select class="form-control" id="status" name="status">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
                         </div>
                     </form>
                 </div>

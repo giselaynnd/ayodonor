@@ -56,8 +56,10 @@ class Peserta extends CI_Model
             'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT)
         ];
 
+
         // $config['file_name'] = $this->db->query("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'webpro' AND TABLE_NAME = 'peserta'")->row()->AUTO_INCREMENT;
         $this->db->insert('peserta', $data);
+        return true;
     }
     public function getPeserta()
     {

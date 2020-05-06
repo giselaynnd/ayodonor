@@ -13,7 +13,7 @@ class Tempat_donor extends CI_Model
         $data  = [ 
             'nama_tempat' => $this->input->post('nama_tempat', true),
             'alamat_tempat' => $this->input->post('alamat_tempat', true),
-            'status' => $status  
+            'status' => $this->input->post('alamat_tempat', true),  
         ];
         $this->db->insert('tempat_donor', $data);
     }
