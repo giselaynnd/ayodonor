@@ -18,13 +18,22 @@
             z-index: 99;
         }
 
+        .form-control{
+            width: 50%;
+        }
+
         #register .form {
             width: 80%;
         }
-        h1{
+        h1 {
             color: grey;
             font-family: PlayfairDisplay, times, serif;
-            font-weight: bold;
+            font-size: 3rem;
+            z-index: 1;
+        }
+
+        .site-header {
+            background: #79101a;
         }
         .material-label{
             color: grey;
@@ -33,26 +42,28 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary">
-        <a class="navbar-brand" href="#">
-            <img src="<?= base_url(); ?>assets/img/logo1.png" alt="logo" /> AYODONOR
-        </a>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url(); ?>">HOME</a>
-                </li>
-                <li class="nav-item nav-login">
-                    <a class="scroll nav-link" href="<?= base_url('Home/register'); ?>">REGISTER</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+    <header class="site-header js-site-header">
+        <nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">
+            <div class="container">
+                <img src="<?= base_url(); ?>assets/img/logo1.png" width="120" alt="aaa">
+                <a class="navbar-brand" href="index.php"><h1 style="color: white;">   AYODONOR</h1></a>
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="scroll nav-link" href="<?= base_url(); ?>">HOME</a>
+                        </li>
+                        <li class="nav-item nav-login">
+                            <a class="scroll nav-link" href="<?= base_url('Home/register'); ?>">REGISTER</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <section id="register" class="d-flex flex-column justify-content-center">
         <div class="container">
-        <div class="mesh">
-            <img src="<?= base_url(); ?>assets/img/zzzz.jpg">
-        </div>
         <?php
         if ($this->session->flashdata('message')) {
             echo '<div class="alert alert-dark" role="alert">

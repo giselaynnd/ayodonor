@@ -20,9 +20,9 @@ body {
 .site-header {					/*untuk header memanggil class secara lokal*/
     position: fixed;
     background: #781616fc;
-/*    top: 0; */
+	top: 0; 
     width: 100%;
-    z-index: 20;
+    z-index: 1;
     -webkit-transition: .3s all ease-in-out;
     -o-transition: .3s all ease-in-out;
     transition: .3s all ease-in-out;
@@ -148,9 +148,9 @@ atau menunjukkan status pemuatan web*/
 	.bg-nav-secondary:not(.dashboard-nav) .nav-link:active {
 		background: #656565 !important;
 	}
-	.bg-nav-secondary:not(.dashboard-nav) .nav-login .nav-link {
+	/*.bg-nav-secondary:not(.dashboard-nav) .nav-login .nav-link {
 		border: 3px solid white !important;
-	}
+	}*/
 	.bg-nav-secondary:not(.dashboard-nav) .nav-login .nav-link:hover,
 	.bg-nav-secondary:not(.dashboard-nav) .nav-login .nav-link:focus,
 	.bg-nav-secondary:not(.dashboard-nav) .nav-login .nav-link:active {
@@ -236,19 +236,9 @@ atau menunjukkan status pemuatan web*/
 }
 @media only screen and (min-width: 992px) {
 	.navbar .nav-item .nav-link {
-		color: rgba(0, 0, 0, 0.9);
+		color: white	;
 		padding: 0.6rem 0.7rem;
 		border: 3px solid transparent;
-	}
-}
-.navbar .nav-login {
-	border: 2px solid white;
-	margin-left: 8px;
-}
-@media only screen and (min-width: 992px) {
-	.navbar .nav-login .nav-link {
-		border: 3px solid black;
-		border-radius: 5px;
 	}
 }
 @media only screen and (min-width: 992px) {
@@ -734,19 +724,8 @@ atau menunjukkan status pemuatan web*/
 	);
 }
 #ab .readmore-btn .btn {
-/*	background-image: linear-gradient(
-		to right,
-		#02bec4 0%,
-		#0284a8 55%,
-		#114375 90%,
-		#253959 100%
-	); */
-	background-image: linear-gradient(
-		to right,
-		#dd514a 0%,
-		#ec4863 30%,
-		#a73e5c 70%,
-		#5c2849 100%
+
+	background-image: linear-gradient( to right, #e6293a 0%, #ff0e37 30%, #bf525c 70%, #e87f92 100% );
 	);
 }
 #a,

@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Register </title>
+    <title>Register - AYODONOR</title>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
 
     <style>
-
+        .site-header {
+            background: #79101a;
+        }
+        
         .form {
             position: relative;
             z-index: 99;
@@ -36,31 +39,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary">
-        <a class="navbar-brand" href="#">
-            <img src="<?= base_url(); ?>assets/img/logo1.png" alt="logo" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="scroll nav-link" href="<?= base_url(); ?>">HOME</a>
-                </li>
-                <li class="nav-item nav-login">
-                    <a class="scroll nav-link" href="<?= base_url('home/login'); ?>">
-                        LOGIN
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <header class="site-header js-site-header">
+        <nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">
+            <div class="container">
+                <img src="<?= base_url(); ?>assets/img/logo1.png" width="120" alt="aaa">
+                <a class="navbar-brand" href="index.php"><h1 style="color: white;">   AYODONOR</h1></a>
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="scroll nav-link" href="<?= base_url(); ?>">HOME</a>
+                        </li>
+                        <li class="nav-item nav-login">
+                            <a class="scroll nav-link" href="<?= base_url('home/login'); ?>">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
    
-    <section id="register" class="animatedParent d-flex flex-column justify-content-center">
-        <div class="mesh">
-            <img src="<?= base_url(); ?>assets/img/zzzz.jpg">
-        </div>
+    <section id="o" class="animatedParent d-flex flex-column justify-content-center">
         <div class="form-container animated fadeInUpShort">
             <?php
             if ($this->session->flashdata('SuccessReg')) {
@@ -101,11 +99,11 @@
                     <td>Re-type password</td>
                     <td><input type="password" class="material-input" name="re-password" required></td>
                     
-                </tr>
-                
-                    <td><button type="submit" class="btn event btn-npc">Register</button></td>
-  
+                </tr>  
             </table>
+            <div class="readmore-btn">
+                <button type="submit" class="btn " style="margin-right: 15px;">REGISTER</button>
+            </div>
             </form>
         </div>
     </section>

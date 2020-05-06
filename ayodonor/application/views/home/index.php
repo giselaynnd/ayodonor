@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
+	<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 	<style>
 		.btn-primary {
 			background-color: #565e67;
@@ -16,12 +17,24 @@
 		}
 
 		a {
-			color: #79101a;
+			color: black;
 		}
 
 		.site-header {
-			background-color: #79101a;;
+			background-color: #79101a;
+			position: fixed;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 20;
 		}
+
+		h1 {
+            color: white;
+            font-family: PlayfairDisplay, times, serif;
+            font-size: 3rem;
+            z-index: 1;
+        }
 	</style>
 </head>
 
@@ -31,7 +44,7 @@
 		<nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">
 			<div class="container">
 				<img src="<?= base_url(); ?>assets/img/logo1.png" width="120" alt="aaa">
-				<a class="navbar-brand" href="index.php"><h1 style="color: #191819;">   AYODONOR</h1></a>
+				<a class="navbar-brand" href="index.php"><h1 style="color: white;">   AYODONOR</h1></a>
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
@@ -156,18 +169,17 @@
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		</ol>
 		  	<div class="carousel-inner">
 		    	<div class="carousel-item active">
 		      		<img src="<?= base_url(); ?>assets/img/dd1.png" class="d-block w-100" alt="...">
 		        	<div class="carousel-caption d-none d-md-block">
-		        		<h1 class="display-4">STOCK DARAH<br> <span class="font-weight-bold">UTD PMI</span></h1>
+		        		<h1 class="display-4">STOCK DARAH<br> <span class="font-weight-bold">PMI JAKARTA</span></h1>
 		        		<hr class="my-4">
 		        		<a class="btn btn-primary btn-lg font-weight-bold" href="http://www.infoutdpmidki.com:5900/Webinfo/LogibockDarah" role="button">KUNJUNGI</a>
 		      		</div>
 		    	</div>
-		    </div>
+		    
 
 		    <div class="carousel-item">
 		      	<img src="<?= base_url(); ?>assets/img/dd3.jpg" class="d-block w-100" alt="...">
@@ -177,6 +189,7 @@
 		        		<a class="btn btn-primary btn-lg font-weight-bold" href="https://pmikotabandung.org/" role="button">KUNJUNGI</a>
 		      		</div>
 		    </div>
+			</div>
 		 	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 		    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		    	<span class="sr-only">Previous</span>
@@ -192,27 +205,41 @@
 
 <!--START FOOTER-->
 
-    <footer class="section footer-section" id="abc">
+    <footer class="section footer-section">
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-3 mb-5">
-            <ul class="list-ubyled link">
-              <li><a href="#abc">About Us</a></li>
+            <ul class="list-unstyled link">
+              <li><a href="#">Tentang Kami</a></li>
+              
+              <li><a href="#">Syarat & ketentuan</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <ul class="list-unstyled link">
+        
+              <li><a href="#">Tentang kami</a></li>
+              <li><a href="#">Hubungi kami</a></li>
+              
             </ul>
           </div>
           <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <p><span class="d-block">Alamat:</span> <span>Bandung</span></p>
-            <p><span class="d-block">Telepon:</span> <span> (022) 435 3533</span></p>
-            <p><span class="d-block">Email:</span> <span> ayodonor@gmail.com</span></p>
+            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+            <p><span class="iconify" data-icon="ic:baseline-location-on" data-inline="false"></span>Alamat:</span> <span> <br>  Bandung</span></p>
+            <p><span class="iconify" data-icon="twemoji:telephone-receiver" data-inline="false"></span>Telepon:</span> <span> <br>  (+1) 435 3533</span></p>
+            <p><span class="iconify" data-icon="ion-ios-mail" data-inline="false"></span> Email:</span> <span> ayodonor@domain.com</span></p>
           </div>
          
             </form>
           </div>
         </div>
         <div class="row pt-5">
-          <p class="col-md-6 text-left">Hak Cipta &copy;<script>document.write(new Date().getFullYear());</script>  <i class="icon-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank" ></a>
+          <p class="col-md-6 text-center">
+           
+            AyoDonor &copy;<script>document.write(new Date().getFullYear());</script>  <i class="icon-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank" ></a>
             
           </p>
+        
         </div>
       </div>
     </footer>

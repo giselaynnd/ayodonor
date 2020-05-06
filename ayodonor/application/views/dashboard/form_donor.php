@@ -5,11 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard - AyoDonor</title>
+    <title>Form Donor - AyoDonor</title>
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
     <style>
+
+        h1, .h1 {
+            font-family: PlayfairDisplay;
+            
+        }
         .form {
             position: relative;
             z-index: 99;
@@ -28,6 +33,10 @@
             padding: 1 !important;
         }
 
+        .btn {
+            color: white;
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -71,21 +80,28 @@
 
     <div class="dashboard-container">
         <h1>Register</h1>
-            <form class="form" action="<?= base_url('user');?>/registDonor/<?=$id_tempat.'/'.$loggedin['id_peserta']; ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
-                <div class="material-form">
-                    <input type="text" class="material-input" name="golonganDarah" value="<?= set_value('golDarah'); ?>" required>
-                    <label class="material-label">Golongan Darah</label>
-                </div>
-                <div class="material-form">
-                    <input type="text" class="material-input" name="rhesus" value="<?= set_value('rhesus'); ?>" required>
-                    <label class="material-label">Rhesus</label>
-                </div>
-                <div class="material-form">
-                    <input type="text" class="material-input" name="penyakit" value="<?= set_value('penyakit'); ?>" required>
-                    <label class="material-label">Riwayat Penyakit</label>
-                </div> 
-                <button type="submit" class="btn event btn-secondary">Register</button>
+        <br>
+        <form class="form" action="<?= base_url('user');?>/registDonor/<?=$id_tempat.'/'.$loggedin['id_peserta']; ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+            <table border="0" width="120">
+                <tr>
+                    <td>Golongan Darah</td>
+                    <td width="900"><input type="text" class="text-field" name="golonganDarah" value="<?= set_value('golDarah'); ?>" required></td> 
+                </tr>
+                <tr>
+                    <td>Rhesus</td>
+                    <td><input type="text" class="material-input" name="rhesus" value="<?= set_value('rhesus'); ?>" required>
+                        </td>                                 
+                </tr>
+                <tr>
+                    <td>Riwayat Penyakit</td>
+                    <td><input type="text" class="material-input" name="penyakit" value="<?= set_value('penyakit'); ?>" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="btn">REGISTER</button></td>
+                </tr>
+            </table>
             </form>
+        <br>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
