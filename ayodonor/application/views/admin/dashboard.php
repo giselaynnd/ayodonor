@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/animations.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+   <!--  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"> -->
     <style>
 
         .alert-secondary{
@@ -50,6 +50,8 @@
     </style>
 </head>
 
+<!-- dashboard -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -87,6 +89,7 @@
         </div>
     </nav>
 
+<!-- container -->
 
     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
@@ -120,9 +123,12 @@
                         </div>
                     </div>
                 </div>
+
+<!-- table -->
+
                 <h3 class="title mt-4">Need Approval</h3>
                 <hr>
-                <table class="table table-hover table-responsive-sm mt-3" id="table">
+                <table class="table table-hover table-striped table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -131,12 +137,15 @@
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
+
+<!-- isi tabel -->
                     <tbody>
                         <?php foreach ($peserta as $d) { ?>
                             <tr>
                                 <th scope="row"><?= $d['id_donor'] ?></th>
                                 <td><?= $this->Peserta->getPesertabyId($d['id_peserta'])['nama'] ?></td>
                                 <td>Mendaftarkan donor di <?= strtoupper($this->Donor->getKetTempat($d['id_peserta'])['nama_tempat']) ?>, Bergolongan darah <?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['gol_darah']) ?><?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['rhesus']) ?>, mempunyai penyakit : <?= strtoupper($this->Donor->getDatadonor($d['id_peserta'])['penyakit']) ?> </td>
+<!-- button group -->
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                                         <?php
@@ -163,7 +172,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
+   
 
     <!-- SCRIPT HERE -->
 

@@ -44,6 +44,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <a class="navbar-brand" href="#">
@@ -83,6 +85,8 @@
         <div class="footer">&copy; AyoDonor.com</div>
     </nav>
 
+<!-- container -->
+
     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
@@ -95,6 +99,8 @@
                         <hr>
                     </div>
                 </div>
+<!-- card  -->
+
                 <?php
                 foreach ($tempat_donor as $data) {
                     ?>

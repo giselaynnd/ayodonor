@@ -42,6 +42,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -80,9 +82,9 @@
         </div>
         <div class="footer">&copy; AyoDonor.com</div>
     </nav>
-    <!-- end head -->
-    <!-- start body -->
 
+<!-- container
+ -->
     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">

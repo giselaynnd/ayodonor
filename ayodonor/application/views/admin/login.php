@@ -5,9 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <title>Login Admin - AYODONOR</title>
-
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/main.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/animations.css">
@@ -43,6 +41,8 @@
 
 <body>
 
+<!-- navbar -->
+
     <header class="site-header js-site-header">
         <nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">
             <div class="container">
@@ -77,6 +77,7 @@
             <div>
                 <h1>LOGIN ADMIN</h1>
             </div>
+<!-- form group -->
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">

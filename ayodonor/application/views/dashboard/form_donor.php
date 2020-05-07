@@ -40,6 +40,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <a class="navbar-brand" href="#">
@@ -78,10 +80,15 @@
         </div>
     </nav>
 
+<!-- container -->
+
     <div class="dashboard-container">
         <h1>Register</h1>
         <br>
         <form class="form" action="<?= base_url('user');?>/registDonor/<?=$id_tempat.'/'.$loggedin['id_peserta']; ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+
+    <!-- basic table -->
+    
             <table border="0" width="120">
                 <tr>
                     <td>Golongan Darah</td>

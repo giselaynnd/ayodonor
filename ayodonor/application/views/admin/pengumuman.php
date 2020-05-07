@@ -43,6 +43,8 @@
 
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -74,6 +76,8 @@
                 </ul>
         </div>
     </nav>
+
+<!-- container -->
 
      <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
@@ -110,6 +114,7 @@
                                 <td><?= $d['description'] ?></td>
                                 <td><?= $d['date_created'] ?></td>
                                 <td><?= $this->Admins->getAdminById($d['id_admin'])['nama'] ?></td>
+<!-- button group -->
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editPengumuman" data-title="<?= $d['title'] ?>" data-id="<?= $d['id_pengumuman'] ?>" data-desc="<?= $d['description'] ?>">Edit</button>
@@ -122,14 +127,15 @@
                 </table>
                 <br>
                 <br>
-                <div class="text-center">© <?php echo date('Y'); ?> Copyright:
+                <div class="text-center">© <?php echo date('Y'); ?>
                     <a href="#"> AyoDonor.com</a>
                  </div>
 
             </div>
         </div>
     </div>
-    <!-- Modal -->
+
+<!-- Modal Fade-->
 
    <div class="modal fade" id="tambahPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -142,6 +148,7 @@
                 </div>
                 <div class="modal-body">
                     <form id="pengumumanBaru" action="addPengumuman" method="POST">
+    <!-- form group -->
                         <div class="form-group">
                             <label for="judul">Judul</label>
                             <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman">
@@ -159,7 +166,8 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
+
+<!-- Modal Fade -->
 
     <div class="modal fade" id="editPengumuman" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -173,6 +181,7 @@
                 <div class="modal-body">
                     <form id="pengumumanEdit" action="editPengumuman" method="POST">
                         <input type="hidden" id="id_pengumuman" name="id_pengumuman">
+            <!-- form group -->
                         <div class="form-group">
                             <label for="judul">Judul</label>
                             <input type="text" name="title" class="form-control" id="judul" placeholder="Judul pengumuman" value="<?= $d['title']?>">

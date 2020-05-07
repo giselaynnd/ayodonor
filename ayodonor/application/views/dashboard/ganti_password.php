@@ -42,6 +42,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -82,8 +84,11 @@
         <div class="footer">&copy; AyoDonor.com</div>
     </nav>
 
+<!-- container  -->
+
     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
+
             <div class="alert alert-secondary">
                 Selamat datang, <b><?= $loggedin['nama']; ?></b> !
             </div>
@@ -101,6 +106,9 @@
                 </div>';
                 } ?>
                 <form class="form" action="ganti_password" method="POST" autocomplete="off" enctype="multipart/form-data" accept-charset="utf-8">
+
+        <!-- basic table -->
+        
                     <table border="0" width="120">
                         <tr>
                             <td>Sekarang</td>

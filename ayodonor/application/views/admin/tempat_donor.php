@@ -43,6 +43,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -80,6 +82,8 @@
         </div>
     </nav>
 
+<!-- container -->
+
      <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
@@ -95,9 +99,9 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#tambahTempatDonor">Tempat Donor Baru</button>
+                    <button class="btn btn-success mr-2" data-toggle="modal" data-target="#tambahTempatDonor">Tambah Tempat Donor</button>
                 </div>
-                <table class="table table-hover table-responsive-sm mt-3" id="table">
+                <table class="table table-hover table-striped table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
                             <th scope="col">Nama Tempat</th>

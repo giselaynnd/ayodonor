@@ -44,6 +44,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -81,6 +83,8 @@
         </div>
     </nav>
 
+<!-- container -->
+
      <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
@@ -95,7 +99,8 @@
                         </div>
                     </div>
                 </div>
-                <table class="table table-hover table-responsive-sm mt-3" id="table">
+<!-- table -->
+                <table class="table table-hover table-striped table-responsive-sm mt-3" id="table">
                     <thead>
                         <tr>
                             <th scope="col">Nama</th>
@@ -190,6 +195,8 @@
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">
+
+// dataTables
             $(document).ready(function() {
             // $('#ex1').zoom();
             $('#table').DataTable();

@@ -39,6 +39,8 @@
     </style>
 </head>
 
+<!-- navbar -->
+
 <body id="dashboard">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-primary dashboard-nav">
         <div class="mesh"></div>
@@ -79,6 +81,8 @@
         <div class="footer">&copy; AyoDonor.com</div>
     </nav>
 
+<!-- container -->
+
     <div class="dashboard-container">
         <div style="min-height: 100%;padding-bottom: 5rem;">
             <div class="alert alert-secondary">
@@ -102,7 +106,7 @@
                     <hr class="mt-5">
                     <div class="row mt-4">
                         <div class="col">
-                            <div class="title">Data Diri</div>
+                            <div class="title">DATA DIRI</div>
                             
                         </div>
                     </div>

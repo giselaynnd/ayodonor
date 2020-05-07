@@ -30,6 +30,8 @@
 
 <body>
 
+<!-- navbar -->
+
 	<header class="site-header js-site-header">
 		<nav class="navbar navbar-expand-lg navbar-black ftco_navbar bg-transparent ftco-navbar-transparent" id="ftco-navbar">
 			<div class="container">
