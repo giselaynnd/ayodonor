@@ -79,12 +79,13 @@
 		    	<a href="https://hot.liputan6.com/read/4234473/5-jenis-golongan-darah-langka-di-seluruh-dunia-yang-masih-banyak-tak-tahu" class="btn btn-primary">Go somewhere</a>
 	  		</div>
 		</div>
+		
 		<div class="card" style="width: 18rem;">
-	  		<img src="<?= base_url(); ?>assets/img/a3.jpg" class="card-img-top" alt="...">
+	  		<img src="<?= base_url(); ?>assets/img/a5.jpg" class="card-img-top" alt="...">
 	  		<div class="card-body">
-		    	<h5 class="card-title">Donor Darah di Tengah Pandemi</h5>
-		    	<p class="card-text">Jangan Takut Donor Darah di Tengah Pandemi Covid 19.</p>
-		    	<a href="https://hot.liputan6.com/read/4234473/5-jenis-golongan-darah-langka-di-seluruh-dunia-yang-masih-banyak-tak-tahu" class="btn btn-primary">Go somewhere</a>
+		    	<h5 class="card-title">Donor Darah di Bulan Ramadhan</h5>
+		    	<p class="card-text">Ingin Donor Darah Saat Puasa? Perhatikan 2 Hal Ini</p>
+		    	<a href="https://www.liputan6.com/ramadan/read/4244284/ingin-donor-darah-saat-puasa-perhatikan-2-hal-ini#" class="btn btn-primary">Go somewhere</a>
 	  		</div>
 		</div>
 		<div class="card" style="width: 18rem;">
@@ -107,11 +108,35 @@
 	<br>
 	<div class="col d-flex justify-content-around">
 		<div class="card" style="width: 18rem;">
-	  		<img src="<?= base_url(); ?>assets/img/a5.jpg" class="card-img-top" alt="...">
+	  		<img src="<?= base_url(); ?>assets/img/a3.jpg" class="card-img-top" alt="...">
 	  		<div class="card-body">
-		    	<h5 class="card-title">Donor Darah di Bulan Ramadhan</h5>
-		    	<p class="card-text">Ingin Donor Darah Saat Puasa? Perhatikan 2 Hal Ini</p>
-		    	<a href="https://www.liputan6.com/ramadan/read/4244284/ingin-donor-darah-saat-puasa-perhatikan-2-hal-ini#">Go somewhere</a>
+		    	<h5 class="card-title">Donor Darah di Tengah Pandemi</h5>
+		    	<p class="card-text">Jangan Takut Donor Darah di Tengah Pandemi Covid 19.</p>
+		    	<a href="https://hot.liputan6.com/read/4234473/5-jenis-golongan-darah-langka-di-seluruh-dunia-yang-masih-banyak-tak-tahu" class="btn btn-primary">Go somewhere</a>
+	  		</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+	  		<img src="<?= base_url(); ?>assets/img/a6.jpg" class="card-img-top" alt="...">
+	  		<div class="card-body">
+		    	<h5 class="card-title">Mengenal Penyakit Leukimia</h5>
+		    	<p class="card-text">Inilah Penyakit Darah Leukimia, Jangan Diabaikan</p>
+		    	<a href="https://hot.liputan6.com/read/4234473/5-jenis-golongan-darah-langka-di-seluruh-dunia-yang-masih-banyak-tak-tahu" class="btn btn-primary">Go somewhere</a>
+	  		</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+	  		<img src="<?= base_url(); ?>assets/img/a7.jpeg" class="card-img-top" alt="...">
+	  		<div class="card-body">
+		    	<h5 class="card-title">Apa Itu Limfoma?</h5>
+		    	<p class="card-text">Salah Satu Bentuk Kanker Darah Yang Menyebabkan Sel Darah Putih Berkembang Abnormal</p>
+		    	<a href="https://www.guesehat.com/manfaat-donor-darah-rutin" class="btn btn-primary">Go somewhere</a>
+	  		</div>
+		</div>
+		<div class="card" style="width: 18rem;">
+	  		<img src="<?= base_url(); ?>assets/img/a8.jpg" class="card-img-top" alt="...">
+	  		<div class="card-body">
+		    	<h5 class="card-title">Mengenal Penyakit Hemofilia</h5>
+		    	<p class="card-text">Jangan Abaikan Jika Darah Sukar Berhenti</p>
+		    	<a href="https://www.guesehat.com/manfaat-donor-darah-rutin" class="btn btn-primary">Go somewhere</a>
 	  		</div>
 		</div>
 	</div>
